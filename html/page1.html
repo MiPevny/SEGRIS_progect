@@ -10,7 +10,22 @@
 			background-image: url(background.jpg);
 			background-size: cover;
 			border: 5px solid #3c5d5d;
-			border-radius: 10px;
+			border-radius: 30px;
+			user-select: none;
+		}
+		.title {
+			font-family: Courier, monospace;
+			color: #4dcfff;
+			font-size: 30px;
+			background-image: url(ForTitle.jpg);
+			width: 1200px;
+			height: 150px;
+			padding: 30px 20px;
+			text-shadow: 3px 4px 10px black, 0 0 1em black;
+			border-radius: 30px;
+			text-align: center;
+			margin: 0px 0px -60px 2px;
+			border: 10px dashed;
 		}
 		.bottom {
 			width: 101%;
@@ -21,8 +36,8 @@
 			background-color: #3c5d5d;
 		}
 		.start {
-			width: 100px;
-			height: 100px;
+			width: 200px;
+			height: 200px;
 			border-radius: 50%;
 			margin: 10px auto 50px;
 			background-color: #EEEEEE;
@@ -31,11 +46,11 @@
 			cursor: pointer;
 			position: relative;
 			outline: none;
-			font-size: 20px;
+			font-size: 40px;
 			color: #4dcfff;
-			left: 570px;
-			top: 200px;
-			user-select: none;
+			left: 520px;
+			top: 150px;
+			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
 		}
 		.start:hover {
 			background: -webkit-linear-gradient(top, #f85032 0%,#efaea5 49%,#f6290c 100%,#f02f17 100%,#e73827 100%);
@@ -45,22 +60,83 @@
 		}
 		.start_game {
 			visibility: hidden;
+			border-radius:20px 0px 20px 20px ;
+			outline: none;
+			cursor: pointer;
+			text-align: center;
+			padding: 20px 20px;
+			background-color: #00cc00;
+			color: white;
+			box-shadow: 3px 4px 10px black, 0 0 1em black;
+		}
+		.start_game:hover {
+			background-color: #1aff1a;
+			color: #4d4d4d;
+		}
+		.start_game:active {
+			color: black;
+			background-color: #00e600;
 		}
 		.start_menu {
 			visibility: hidden;
+			border-radius:0px 20px 20px 20px ;
+			outline: none;
+			cursor: pointer;
+			text-align: center;
+			padding: 20px 20px;
+			margin-left: 70px;
+			background-color: #00cc00;
+			color: white;
+			box-shadow: 3px 4px 10px black, 0 0 1em black;
+		}
+		.start_menu:hover {
+			background-color: #1aff1a;
+			color: #4d4d4d;
+		}
+		.start_menu:active {
+			color: black;
+			background-color: #00e600;
 		}
 	</style>
 </head>
 <body>
 	<div class="all_page">
+		<div class="title"><h1>Текстовая квест-игра "Выживший"</h1></div>
 		<button class="start" id="start">PRESS START</button>
-		<button class="start_game" id="start_game">PRESS START</button>
-		<button class="start_menu" id="start_menu">PRESS START</button>
+		<div style="margin: 100px 0px 0px 450px">
+			<button class="start_game" id="start_game"><b>START GAME</b></button>
+			<button class="start_menu" id="start_menu"><b>READ RULES</b></button>
+		</div>
 
 		<div class="bottom"></div>
 
 		<script type="text/javascript">
-    /* В разработке :) */
+			let StartButton = document.getElementById('start');
+			let StartGame = document.getElementById('start_game');
+			let StartRules = document.getElementById('start_menu');
+
+			StartButton.addEventListener('click', function() {
+				if (StartButton == 0) { 
+					StartGame.style.visibility = 'hidden'
+					StartRules.style.visibility = 'hidden'
+					StartButton = 1;
+				} else {
+					StartGame.style.visibility = 'visible'
+					StartRules.style.visibility = 'visible'
+					StartButton = 0;
+				}
+				
+				
+
+			});
+
+
+
+
+
+
+
+			console.log();
 		</script>
 	</div>
 </body>
