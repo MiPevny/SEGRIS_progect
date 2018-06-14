@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<style type="text/css">
+		.robot {
+			width: 500px;
+			height: 500px;
+			user-select: none;
+			background-image: url(ForTitle.jpg);
+			border-radius: 20px;
+			border: 10px dashed #4dcfff;
+		}
+		.top {
+			width: 500px;
+			height: 100px;
+			padding-top: 60px;
+		}
+		.body {
+			width: 500px;
+			height: 200px;
+			margin-top: -40px;
+		}
+		.bottom {
+			width: 500px;
+			height: 200px;
+			padding: 0px 0px 0px 0px;
+		}
+		.head {
+			width: 80px;
+			height: 60px;
+			background-image: url(HeadOfRobot.jpg);
+			margin: -40px 0px 0px 195px;
+			border-radius: 10px;
+		}
+		.head:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+		.arm_l {
+			width: 50px;
+			height: 200px;
+			background-image: url(LeftArm.jpg);
+			margin-left: 135px;
+			margin-top: 10px;
+			display: inline-block;
+			border-radius: 30px 0px 30px 30px;
+		}
+		.arm_l:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+		.arm_r {
+			width: 50px;
+			height: 200px;
+			background-image: url(RightArm.jpg);
+			margin-top: 10px;
+			display: inline-block;
+			border-radius: 0px 30px 30px 30px;
+		}
+		.arm_r:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+		.torso {
+			width: 100px;
+			height: 200px;
+			background-image: url(Body.jpg);
+			margin: 0px -5px 30px -5px;
+			display: inline-block;
+			border-radius: 20px;
+		}
+		.torso:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+		.leg {
+			width: 120px;
+			height: 150px;
+			background-image: url(Leg.jpg);
+			margin-left: 175px;
+			display: inline-block;
+			border-radius: 20px 20px 30px 30px;
+		}
+		.leg:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+
+		.inf_head {
+			width: 200px;
+			height: 50px;
+			background-color: #4dcfff;
+			border-radius: 20px 20px 0px 20px;
+			visibility: hidden;
+			margin: -30px 0px 0px 25px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 10px;
+		}
+		.inf_body {
+			width: 180px;
+			height: 80px;
+			background-color: #4dcfff;
+			border-radius: 20px 20px 20px 0px;
+			visibility: hidden;
+			margin: -480px 0px 0px 280px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 5px;
+		}
+		.inf_arm_l {
+			width: 130px;
+			height: 80px;
+			background-color: #4dcfff;
+			border-radius: 20px 0px 20px 20px;
+			visibility: hidden;
+			margin: 170px 0px 0px 10px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 5px;
+		}
+		.inf_arm_r {
+			width: 120px;
+			height: 100px;
+			background-color: #4dcfff;
+			border-radius: 0px 20px 20px 20px;
+			visibility: hidden;
+			margin: -200px 0px 0px 330px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 5px;
+		}
+		.inf_leg {
+			width: 120px;
+			height: 60px;
+			background-color: #4dcfff;
+			border-radius: 0px 20px 20px 20px;
+			visibility: hidden;
+			margin: 90px 0px 0px 290px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="robot">
+		<div class="top">
+			<div class="inf_head" id="InfHead">
+			<b>Важый элемент вашего робота-голова!</b>
+			</div>
+			<div class="head" id="Head"></div>
+		</div>
+		<div class="body">
+			<div class="arm_l" id="ArmLeft"></div>
+			<div class="torso" id="Body"></div>
+			<div class="arm_r" id="ArmRight"></div>
+		</div>
+		<div class="bottom">
+			<div class="leg" id="Leg"></div>
+		</div>
+
+		<div class="inf_body" id="InfBody">
+			<b>Тело представляет собой огромную батарейку с кучей разных механизмов</b>
+		</div>
+		<div class="inf_arm_l" id="InfArmLeft">
+			<b>Рука-клешня позволяет брать разные вещи</b>
+		</div>
+		<div class="inf_arm_r" id="InfArmRight">
+			<b>Рука-бур поможет разбивать препятствия на вашем пути</b>
+		</div>
+		<div class="inf_leg" id="InfLeg">
+			<b>С хорошей подвеской и ехать приятно</b>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let Head = document.getElementById('Head');
+		let Body = document.getElementById('Body');
+		let ArmLeft = document.getElementById('ArmLeft');
+		let ArmRight = document.getElementById('ArmRight');
+		let Leg = document.getElementById('Leg');
+
+
+
+		let InfHead = document.getElementById('InfHead');
+		let InfBody = document.getElementById('InfBody');
+		let InfArmLeft = document.getElementById('InfArmLeft');
+		let InfArmRight = document.getElementById('InfArmRight');
+		let InfLeg = document.getElementById('InfLeg');
+
+		//onmouseout покидает
+		//onmouseover наводится
+
+		Head.addEventListener('click', function() {
+			if (Head != 0) {
+				InfHead.style.visibility = 'visible'
+				Head = 0
+			} else {
+				InfHead.style.visibility = 'hidden'
+				Head = 1
+			};
+		});
+		Body.addEventListener('click', function() {
+			if (Body != 0) {
+				InfBody.style.visibility = 'visible'
+				Body = 0
+			} else {
+				InfBody.style.visibility = 'hidden'
+				Body = 1
+			};
+		});
+		ArmLeft.addEventListener('click', function() {
+			if (ArmLeft != 0) {
+				InfArmLeft.style.visibility = 'visible'
+				ArmLeft = 0
+			} else {
+				InfArmLeft.style.visibility = 'hidden'
+				ArmLeft = 1
+			};
+		});
+		ArmRight.addEventListener('click', function() {
+			if (ArmRight != 0) {
+				InfArmRight.style.visibility = 'visible'
+				ArmRight = 0
+			} else {
+				InfArmRight.style.visibility = 'hidden'
+				ArmRight = 1
+			};
+		});
+		Leg.addEventListener('click', function() {
+			if (Leg != 0) {
+				InfLeg.style.visibility = 'visible'
+				Leg = 0
+			} else {
+				InfLeg.style.visibility = 'hidden'
+				Leg = 1
+			};
+		});
+
+	</script>
+</body>
+</html>
