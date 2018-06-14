@@ -3,21 +3,27 @@
 <head>
 	<title></title>
 	<style type="text/css">
-		.all_page {
+		.inf {
+			margin-top: 240px;
+			font-family: sans-serif;
+			font-size: 10px;
+		}
+		.all_page1 {
 			width: 100%;
 			height: 800px;
 			margin-left: -5px;
-			background-image: url(background.jpg);
+			background-image: url(\Фотографии/background.jpg);
 			background-size: cover;
 			border: 5px solid #3c5d5d;
 			border-radius: 30px;
 			user-select: none;
+			visibility: hidde;
 		}
 		.title {
 			font-family: Courier, monospace;
 			color: #4dcfff;
 			font-size: 30px;
-			background-image: url(ForTitle.jpg);
+			background-image: url(\Фотографии/ForTitle.jpg);
 			width: 1200px;
 			height: 150px;
 			padding: 30px 20px;
@@ -26,14 +32,6 @@
 			text-align: center;
 			margin: 0px 0px -60px 2px;
 			border: 10px dashed;
-		}
-		.bottom {
-			width: 101%;
-			height: 20%;
-			position: fixed;
-			top: 80%;
-			margin-left: -10px;
-			background-color: #3c5d5d;
 		}
 		.start {
 			width: 200px;
@@ -97,23 +95,126 @@
 			color: black;
 			background-color: #00e600;
 		}
+
+
+
+
+
+
+		i {
+			font-family: fantasy;
+		}
+		.all_page2 {
+			width: 100%;
+			height: 800px;
+			margin-left: -5px;
+			background-image: url(\Фотографии/picture1.jpg);
+			background-size: cover;
+			border: 5px solid #3c5d5d;
+			border-radius: 30px;
+			user-select: none;
+			visibility: hidden;
+			margin-top: -810px;
+		}
+		.beginner {
+			background-image: url(\Фотографии/ForText.jpg);
+			width: 650px;
+			height: 740px;
+			border-radius: 20px;
+			margin: 20px 0px 0px 300px;
+			font-size: 25px;
+			font-family: sans-serif;
+			padding: 10px;
+			
+		}
+		.hero_name {
+			width: 140px;
+			font-size: 15px;
+			outline: none;
+			font: fantasy;
+			background-color: black;
+			color: white;
+			border-radius: 0px 10px 10px 0px;
+			margin-top: 5px;
+		}
+		.hero_name:hover {
+			background-color: #003300;
+		}
+		.rules_repeat {
+			width: 605px;
+			background-color: #00cc00;
+			cursor: pointer;
+		}
+		.rules_repeat:hover {
+			background-color: #1aff1a;
+		}
+		.next {
+			width: 200px;
+			height: 40px;
+			margin: 150px 0px 0px 100px ;
+			text-align: center;
+			cursor: pointer;
+			position: relative;
+			outline: none;
+			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+			font-size: 30px;
+			display: inline-block;
+		}
+		.button_hero {
+			background-color: #4dcfff;
+			font-size: 15px;
+			border-radius: 20px 0px 0px 20px;
+			outline: none;
+			cursor: pointer;
+			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+
+		}
+		.button_hero:hover {
+			background-color: #1ac2ff;
+		}
 	</style>
 </head>
 <body>
-	<div class="all_page">
+	<div class="all_page1" id="Page1">
 		<div class="title"><h1>Текстовая квест-игра "Выживший"</h1></div>
 		<button class="start" id="start">PRESS START</button>
 		<div style="margin: 100px 0px 0px 450px">
 			<button class="start_game" id="start_game"><b>START GAME</b></button>
 			<button class="start_menu" id="start_menu"><b>READ RULES</b></button>
 		</div>
+		<div class="inf">
+			<div>Was created with the support of SEGRYS ©</div>
+			<div>Summer 2018</div>
+		</div>
+	</div>
+	
 
-		<div class="bottom"></div>
 
-		<script type="text/javascript">
+
+
+	<div class="all_page2" id="PageGame1">
+		<div class="beginner">
+			<p>Приветсвуем вас в игре <i>"Выживший"</i></p>
+			<div>Здесь вам предстоит играть за робота, который остался совсем один после огромной катастрофы в далеком <i>3048</i> году. Теперь ему придется выживать и искать себе подобных, чтобы собрать все силы вместе и возродить механический мир.</div>
+			<div>Но было бы всё так просто? На пути вам встретятся опасности, проблемы и сложые выборы, которые повлияют на ваше дальнейшее путешествие.</div>
+			<div class="rules_repeat">(Советуем прочитать правила перед началом игры)</div>
+			<p>А теперь дайте имя своему герою! И наделите его навыками, которые помогут ему в дальнейшем.</p>
+			<p>Моего героя зовут <input type="text" class="hero_name" id="HeroName">, и этому роботу я даю возможность быть
+				<select class="hero_name" id="HeroClass">
+					<option></option>
+					<option id="">✚Ловким✚</option>
+					<option id="">ϟСильнымϟ</option>
+					<option id="">☯Быстрым☯</option>
+				</select>
+				<button class="button_hero" id="ButtonHero">Сохранить моего робота</button>
+			</p>
+			<div><button class="next" id="BeforePage"><i>В меню</i></button><button class="next" id="NextPage" style="margin: -150px 0px 0px 50px;">☠<i>Начать</i>☣</button></div>
+		</div>
+	</div>
+	<script type="text/javascript">
 			let StartButton = document.getElementById('start');
-			let StartGame = document.getElementById('start_game');
-			let StartRules = document.getElementById('start_menu');
+			let StartGame = document.getElementById('start_game'); //Игра
+			let StartRules = document.getElementById('start_menu'); //Правила
 
 			StartButton.addEventListener('click', function() {
 				if (StartButton == 0) { 
@@ -124,20 +225,36 @@
 					StartGame.style.visibility = 'visible'
 					StartRules.style.visibility = 'visible'
 					StartButton = 0;
-				}
-				
-				
+				}	
+			});
 
+			StartGame.addEventListener('click', function() {
+				StartGame.style.visibility = 'hidden';
+				StartRules.style.visibility = 'hidden';
+				Page1.style.visibility = 'hidden';
+				PageGame1.style.visibility = 'visible';
 			});
 
 
 
 
+			let HeroName = document.getElementById('HeroName'); //text
+		let HeroClass = document.getElementById('HeroClass'); //select
+		let ButtonHero = document.getElementById('ButtonHero'); //button
 
+		ButtonHero.addEventListener('click', function() {
 
+			let SaveRobot = HeroName.value; //Имя робота
+			let SaveClass = HeroClass.value; //Умение робота
+		});
 
-			console.log();
-		</script>
-	</div>
+		BeforePage.addEventListener('click', function() {
+				StartGame.style.visibility = 'visible';
+				StartRules.style.visibility = 'visible';
+				Page1.style.visibility = 'visible';
+				PageGame1.style.visibility = 'hidden';
+		});
+
+	</script>
 </body>
 </html>
