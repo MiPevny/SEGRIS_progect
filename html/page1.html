@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- https://rawcdn.githack.com/MiPevny/SEGRYS_progect/master/html/page1.html -->
 	<title></title>
 	<style type="text/css">
 		.inf {
@@ -9,6 +8,9 @@
 			font-family: sans-serif;
 			font-size: 10px;
 		}
+		
+		
+		/*Начальная страница сайта "Меню"*/
 		.all_page1 {
 			width: 100%;
 			height: 800px;
@@ -18,7 +20,7 @@
 			border: 5px solid #3c5d5d;
 			border-radius: 30px;
 			user-select: none;
-			visibility: hidden;
+			visibility: visible;
 		}
 		.title {
 			font-family: Courier, monospace;
@@ -50,6 +52,7 @@
 			left: 520px;
 			top: 150px;
 			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+			visibility: visible;
 		}
 		.start:hover {
 			background: -webkit-linear-gradient(top, #f85032 0%,#efaea5 49%,#f6290c 100%,#f02f17 100%,#e73827 100%);
@@ -67,6 +70,7 @@
 			background-color: #00cc00;
 			color: white;
 			box-shadow: 3px 4px 10px black, 0 0 1em black;
+			visibility: hidden;
 		}
 		.start_game:hover {
 			background-color: #1aff1a;
@@ -87,6 +91,7 @@
 			background-color: #00cc00;
 			color: white;
 			box-shadow: 3px 4px 10px black, 0 0 1em black;
+			visibility: hidden;
 		}
 		.start_menu:hover {
 			background-color: #1aff1a;
@@ -96,15 +101,12 @@
 			color: black;
 			background-color: #00e600;
 		}
-
-
-
-
-
-
 		i {
 			font-family: fantasy;
 		}
+		/*Начальная страница сайта "Меню"*/
+		
+		/*Начальная страница игры*/
 		.all_page2 {
 			width: 100%;
 			height: 800px;
@@ -168,14 +170,17 @@
 			outline: none;
 			cursor: pointer;
 			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
-
 		}
 		.button_hero:hover {
 			background-color: #1ac2ff;
 		}
+		/*Начальная страница игры*/
+		
+		
 	</style>
 </head>
 <body>
+<!---->
 	<div class="all_page1" id="Page1">
 		<div class="title"><h1>Текстовая квест-игра "Выживший"</h1></div>
 		<button class="start" id="start">PRESS START</button>
@@ -188,11 +193,7 @@
 			<div>Summer 2018</div>
 		</div>
 	</div>
-	
-
-
-
-
+<!---->
 	<div class="all_page2" id="PageGame1">
 		<div class="beginner">
 			<p>Приветсвуем вас в игре <i>"Выживший"</i></p>
@@ -212,49 +213,61 @@
 			<div><button class="next" id="BeforePage"><i>В меню</i></button><button class="next" id="NextPage" style="margin: -150px 0px 0px 50px;">☠<i>Начать</i>☣</button></div>
 		</div>
 	</div>
+<!---->
 	<script type="text/javascript">
 			let StartButton = document.getElementById('start');
 			let StartGame = document.getElementById('start_game'); //Игра
 			let StartRules = document.getElementById('start_menu'); //Правила
+			let Page1 = document.getElementById('Page1'); //Первая страница "Меню" all_page1
+			let PageGame1 = document.getElementById('PageGame1');
 
+
+			//Начальная кнопка на первом экране
 			StartButton.addEventListener('click', function() {
-				if (StartButton == 0) { 
-					StartGame.style.visibility = 'hidden'
-					StartRules.style.visibility = 'hidden'
-					StartButton = 1;
-				} else {
+				if (StartButton != 0) { 
 					StartGame.style.visibility = 'visible'
 					StartRules.style.visibility = 'visible'
 					StartButton = 0;
+				} else {
+					StartGame.style.visibility = 'hidden'
+					StartRules.style.visibility = 'hidden'
+					StartButton = 1;
 				}	
-			});
+			});//Начальная кнопка на первом экране
+			
 
+			//Кнопка начала игры на первом экране
 			StartGame.addEventListener('click', function() {
-				StartGame.style.visibility = 'hidden';
-				StartRules.style.visibility = 'hidden';
+				StartGame.style.visibility = 'hidden'
+				StartRules.style.visibility = 'hidden'
+				StartButton = document.getElementById('start');
+				StartButton.style.visibility = 'hidden';
+
 				Page1.style.visibility = 'hidden';
 				PageGame1.style.visibility = 'visible';
-			});
+				
+				let HeroName = document.getElementById('HeroName'); //text all_page2
+				let HeroClass = document.getElementById('HeroClass'); //select all_page2
+				let ButtonHero = document.getElementById('ButtonHero'); //button all_page2
+			});//Кнопка начала игры на первом экране
+			
 
+			//Сохранить имя и способность робота
+			ButtonHero.addEventListener('click', function() {
+				let SaveRobot = HeroName.value; //Имя робота
+				let SaveClass = HeroClass.value; //Умение робота
+				console.log(SaveRobot + SaveClass);
+			});//Сохранить имя и способность робота
+			
 
-
-
-			let HeroName = document.getElementById('HeroName'); //text
-		let HeroClass = document.getElementById('HeroClass'); //select
-		let ButtonHero = document.getElementById('ButtonHero'); //button
-
-		ButtonHero.addEventListener('click', function() {
-
-			let SaveRobot = HeroName.value; //Имя робота
-			let SaveClass = HeroClass.value; //Умение робота
-		});
-
-		BeforePage.addEventListener('click', function() {
-				StartGame.style.visibility = 'visible';
-				StartRules.style.visibility = 'visible';
+			//Кнопка возвратит на начальную страницу
+			BeforePage.addEventListener('click', function() {
 				Page1.style.visibility = 'visible';
 				PageGame1.style.visibility = 'hidden';
-		});
+				StartButton.style.visibility = 'visible';
+			});//Кнопка возвратит на начальную страницу
+
+			
 
 	</script>
 </body>
