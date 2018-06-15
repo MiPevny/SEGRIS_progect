@@ -11,7 +11,7 @@
 		
 		
 		/*Начальная страница сайта "Меню"*/
-		.all_page1 {
+		.all_page1Menu {
 			width: 100%;
 			height: 800px;
 			margin-left: -5px;
@@ -107,7 +107,7 @@
 		/*Начальная страница сайта "Меню"*/
 		
 		/*Начальная страница игры*/
-		.all_page2 {
+		.all_page1Game {
 			width: 100%;
 			height: 800px;
 			margin-left: -5px;
@@ -119,7 +119,7 @@
 			visibility: hidden;
 			margin-top: -810px;
 		}
-		.beginner {
+		.beginner_page1Game {
 			background-image: url(ForText.jpg);
 			width: 650px;
 			height: 740px;
@@ -175,13 +175,75 @@
 			background-color: #1ac2ff;
 		}
 		/*Начальная страница игры*/
-		
-		
+
+		li {
+			font-size: 20px;
+		}
+
+		/*Начальная страница правил*/
+		.all_page1Rules {
+			width: 100%;
+			height: 800px;
+			margin-left: -5px;
+			background-image: url(picture1.jpg);
+			background-size: cover;
+			border: 5px solid #3c5d5d;
+			border-radius: 30px;
+			user-select: none;
+			visibility: hidden;
+			margin-top: -810px;
+
+		}
+		.beginner_page1Rules {
+			background-image: url(ForText.jpg);
+			width: 1050px;
+			height: 740px;
+			border-radius: 20px;
+			margin: 20px 0px 0px 100px;
+			font-size: 25px;
+			font-family: sans-serif;
+			padding: 10px;
+		}
+		.next1 {
+			width: 200px;
+			height: 40px;
+			text-align: center;
+			cursor: pointer;
+			position: relative;
+			outline: none;
+			left: 10px;
+			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+			font-size: 30px;
+		}
+		.next2 {
+			width: 200px;
+			height: 40px;
+			margin: 10px;
+			text-align: center;
+			cursor: pointer;
+			position: relative;
+			outline: none;
+			left: 630px;
+			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+			font-size: 30px;
+		}
+		.beginner1 {
+			background-image: url(ForText.jpg);
+			width: 1050px;
+			height: 740px;
+			border-radius: 20px;
+			margin: 20px 0px 0px 100px;
+			font-size: 25px;
+			font-family: sans-serif;
+			padding: 10px;
+			visibility: visible;
+		}/*Начальная страница правил*/
+
 	</style>
 </head>
 <body>
-<!---->
-	<div class="all_page1" id="Page1">
+	<!---->
+	<div class="all_page1Menu" id="Page1">
 		<div class="title"><h1>Текстовая квест-игра "Выживший"</h1></div>
 		<button class="start" id="start">PRESS START</button>
 		<div style="margin: 100px 0px 0px 450px">
@@ -193,13 +255,13 @@
 			<div>Summer 2018</div>
 		</div>
 	</div>
-<!---->
-	<div class="all_page2" id="PageGame1">
-		<div class="beginner">
+	<!---->
+	<div class="all_page1Game" id="PageGame1">
+		<div class="beginner_page1Game">
 			<p>Приветсвуем вас в игре <i>"Выживший"</i></p>
 			<div>Здесь вам предстоит играть за робота, который остался совсем один после огромной катастрофы в далеком <i>3048</i> году. Теперь ему придется выживать и искать себе подобных, чтобы собрать все силы вместе и возродить механический мир.</div>
 			<div>Но было бы всё так просто? На пути вам встретятся опасности, проблемы и сложые выборы, которые повлияют на ваше дальнейшее путешествие.</div>
-			<div class="rules_repeat">(Советуем прочитать правила перед началом игры)</div>
+			<div class="rules_repeat" id="Page1Rules1">(Советуем прочитать правила перед началом игры)</div>
 			<p>А теперь дайте имя своему герою! И наделите его навыками, которые помогут ему в дальнейшем.</p>
 			<p>Моего героя зовут <input type="text" class="hero_name" id="HeroName">, и этому роботу я даю возможность быть
 				<select class="hero_name" id="HeroClass">
@@ -210,17 +272,40 @@
 				</select>
 				<button class="button_hero" id="ButtonHero">Сохранить моего робота</button>
 			</p>
-			<div><button class="next" id="BeforePage"><i>В меню</i></button><button class="next" id="NextPage" style="margin: -150px 0px 0px 50px;">☠<i>Начать</i>☣</button></div>
+			<div><button class="next" id="GameMenu"><i>В меню</i></button><button class="next" id="NextPage" style="margin: -150px 0px 0px 50px;">☠<i>Начать</i>☣</button></div>
 		</div>
 	</div>
-<!---->
+	<!---->
+	<div class="all_page1Rules" id="PageRules1">
+		<div class="beginner_page1Rules">
+			<div>Так как это текстовой квест, здесь вам будут задаваться вопросы и предложены варианты ответов.</div>
+			<div>В игре представлены индикаторы и показатели такие как:</div>
+			<div>✚ здоровье;</div>
+			<div> ϟ энергия;</div>
+			<div>✪ количество найденных роботов для победы;</div>
+			<div>☯ датчик видимости.</div>
+			<img src="Фотографии/RobotFoto.jpg" style="float: left;margin-bottom: 0px;border: 3px solid #00cc00;border-radius: 20px;">
+			<div>←Это ваш персонаж, его можно назвать и выбрать ему способности в начале игры.</div>
+			<div>В прохождении он будет доступен как иконка, причем интерактивная. С щелчком по отдельной части робота, появится ее описание.</div>
+			<p>【Описания индикаторов героя】</p>
+			<li>Здоровье везде одно и везде оно важно! К сожалению в игре оно будет только отниматься. Берегите своего героя!</li>
+			<li>Энергия важная штука у роботов, или как они там говорят. Иногда будет выпадать шанс подзаредиться, ибо робот с низким колличеством энергии далеко не уедет.</li>
+			<li>По пути вы будите находить своих братьев по несчастью. Собрав их всех вместе вы сможете пережить эту катастрофу. Количество собранных роботов - это очки. Для прохождения квеста нужно набрать 10 очков.</li>
+			<li>Датчик видимости будет показывать уровень опасности или слежения. За героем могут следовать охотники или другие опасные для вас "неприятности". Максимальный уровень опасности - 10. И поверьте, лучше не знать, что произойдет, когда датчик повысится.</li>
+			<button class="next1" id="RulesMenu"><i>В меню</i></button><button class="next2" id="Next"><i>Вперед►</i></button>
+		</div>
+	</div>
+	<!---->
 	<script type="text/javascript">
 			let StartButton = document.getElementById('start');
 			let StartGame = document.getElementById('start_game'); //Игра
 			let StartRules = document.getElementById('start_menu'); //Правила
+			let Page1Rules1 = document.getElementById('Page1Rules1'); //Правила. Повторный запрос
 			let Page1 = document.getElementById('Page1'); //Первая страница "Меню" all_page1
-			let PageGame1 = document.getElementById('PageGame1');
-
+			let PageGame1 = document.getElementById('PageGame1'); //Первая страница игры
+			let PageRules1 = document.getElementById('PageRules1'); //Первая страница правил
+			let GameMenu = document.getElementById('GameMenu') //Кнопка возврата на страницу меню
+			let RulesMenu = document.getElementById('RulesMenu') //Кнопка возврата на страницу меню
 
 			//Начальная кнопка на первом экране
 			StartButton.addEventListener('click', function() {
@@ -236,7 +321,7 @@
 			});//Начальная кнопка на первом экране
 			
 
-			//Кнопка начала игры на первом экране
+			//Кнопка перехода на страницу игры на первом экране
 			StartGame.addEventListener('click', function() {
 				StartGame.style.visibility = 'hidden'
 				StartRules.style.visibility = 'hidden'
@@ -249,7 +334,7 @@
 				let HeroName = document.getElementById('HeroName'); //text all_page2
 				let HeroClass = document.getElementById('HeroClass'); //select all_page2
 				let ButtonHero = document.getElementById('ButtonHero'); //button all_page2
-			});//Кнопка начала игры на первом экране
+			});//Кнопка перехода на страницу игры на первом экране
 			
 
 			//Сохранить имя и способность робота
@@ -261,14 +346,39 @@
 			
 
 			//Кнопка возвратит на начальную страницу
-			BeforePage.addEventListener('click', function() {
+			GameMenu.addEventListener('click', function() {
 				Page1.style.visibility = 'visible';
 				PageGame1.style.visibility = 'hidden';
 				StartButton.style.visibility = 'visible';
 			});//Кнопка возвратит на начальную страницу
 
-			
+			//Кнопка перехода на страницу правил на первом экране
+			StartRules.addEventListener('click', function() {
+				StartGame.style.visibility = 'hidden'
+				StartRules.style.visibility = 'hidden'
+				StartButton = document.getElementById('start');
+				StartButton.style.visibility = 'hidden';
 
+				Page1.style.visibility = 'hidden';
+				PageGame1.style.visibility = 'hidden';
+				PageRules1.style.visibility = 'visible';
+			});//Кнопка перехода на страницу правил на первом экране
+
+
+			//Кнопка возвратит на начальную страницу
+			RulesMenu.addEventListener('click', function() {
+				Page1.style.visibility = 'visible';
+				PageRules1.style.visibility = 'hidden';
+				StartButton.style.visibility = 'visible';
+			});//Кнопка возвратит на начальную страницу
+
+			//Кнопка открывает страницу правил пофторно
+			Page1Rules1.addEventListener('click', function() {
+				Page1.style.visibility = 'hidden';
+				PageGame1.style.visibility = 'hidden';
+				PageRules1.style.visibility = 'visible';
+				StartButton.style.visibility = 'hidden';
+			});//Кнопка открывает страницу правил пофторно
 	</script>
 </body>
 </html>
