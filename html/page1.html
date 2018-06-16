@@ -8,6 +8,13 @@
 			font-family: sans-serif;
 			font-size: 10px;
 		}
+
+		span {
+			color: red;
+		}
+		.backtext {
+			margin-left: -300px;
+		}
 		
 		
 		/*Начальная страница сайта "Меню"*/
@@ -194,6 +201,7 @@
 			margin-top: -810px;
 
 		}
+		/*1*/
 		.beginner_page1Rules {
 			background-image: url(ForText.jpg);
 			width: 1050px;
@@ -226,7 +234,26 @@
 			left: 630px;
 			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
 			font-size: 30px;
-		}/*Начальная страница правил*/
+		}/*1*/
+
+		/*2*/
+		.beginner_page2Rules {
+			background-image: url(ForText.jpg);
+			width: 1050px;
+			height: 740px;
+			border-radius: 20px;
+			margin: 20px 0px 0px 100px;
+			font-size: 25px;
+			font-family: sans-serif;
+			padding: 10px;
+			visibility: hidden;
+			margin-top: -760px;
+		}/*2*/
+
+
+
+
+		/*Начальная страница правил*/
 
 	</style>
 </head>
@@ -266,35 +293,51 @@
 	</div>
 	<!---->
 	<div class="all_page1Rules" id="PageRules1">
-		<div class="beginner_page1Rules">
+		<div class="beginner_page1Rules" id="Page1Rules">
 			<div>Так как это текстовой квест, здесь вам будут задаваться вопросы и предложены варианты ответов.</div>
 			<div>В игре представлены индикаторы и показатели такие как:</div>
-			<div>✚ здоровье;</div>
+			<div>✚ состояние;</div>
 			<div> ϟ энергия;</div>
-			<div>✪ количество найденных роботов для победы;</div>
-			<div>☯ датчик видимости.</div>
+			<div>✪ количество найденных роботов</div>
+			<div>☯ степень обнаружения.</div>
 			<img src="Фотографии/RobotFoto.jpg" style="float: left;margin-bottom: 0px;border: 3px solid #00cc00;border-radius: 20px;">
 			<div>←Это ваш персонаж, его можно назвать и выбрать ему способности в начале игры.</div>
 			<div>В прохождении он будет доступен как иконка, причем интерактивная. С щелчком по отдельной части робота, появится ее описание.</div>
-			<p>【Описания индикаторов героя】</p>
-			<li>Здоровье везде одно и везде оно важно! К сожалению в игре оно будет только отниматься. Берегите своего героя!</li>
-			<li>Энергия важная штука у роботов, или как они там говорят. Иногда будет выпадать шанс подзаредиться, ибо робот с низким колличеством энергии далеко не уедет.</li>
-			<li>По пути вы будите находить своих братьев по несчастью. Собрав их всех вместе вы сможете пережить эту катастрофу. Количество собранных роботов - это очки. Для прохождения квеста нужно набрать 10 очков.</li>
-			<li>Датчик видимости будет показывать уровень опасности или слежения. За героем могут следовать охотники или другие опасные для вас "неприятности". Максимальный уровень опасности - 10. И поверьте, лучше не знать, что произойдет, когда датчик повысится.</li>
-			<button class="next1" id="RulesMenu"><i>В меню</i></button><button class="next2" id="Next"><i>Вперед►</i></button>
+			<div>【Описания индикаторов героя】</div>
+			<li>Механическое состояние робота <span>невосполнимо</span> и равно ✚100. Рисковать работоспособностью, значит повлечь за собой гибель или разрушение. Берегите своего героя от повреждений!</li>
+			<li>Энергия важная штука у роботов, или как они там говорят. Иногда будет выпадать шанс подзарядиться, ибо робот с низким количеством энергии далеко не уедет.Но хорошего понемногу и поэтому, превысив отметку ϟ100, робот <span>может взорваться</span>.</li>
+			<li>По пути вы будите находить своих братьев по несчастью. Собрав их всех вместе, вы сможете пережить эту катастрофу. Количество собранных роботов - это очки. Для прохождения квеста, <span>нужно набрать</span> ✪10 очков.</li>
+			<li>Степень обнаружения показывает опасность столкновения с врагом. Максимальный уровень равен ☯10. И поверьте, лучше не знать, что произойдет, когда уровень повысится.</li>
+			<button class="next1" id="RulesMenu"><i>В меню</i></button><button class="next2" id="NextRules"><i>Вперед►</i></button>
+		</div>
+		<div class="beginner_page2Rules" id="Pag2Rules">
+			Способности роботу, при желании, <span>можно не выбирать</span>. Так как они облегчают прохождение квеста.
+			<li>Ловкость дает вашему герою бонус в размере ✚50, тем самым он становится менее уязвимым для атак противника.</li>
+			<li>Сила ускоряет процесс зарядки на ϟ10 и держится дольше обычного</li>
+			<li>Способность ☯Быстрый☯ позволяет роботу уходить от преследования гораздо быстее. А значет меньше риск встречи с неприятелями.</li>
+			<p class="backtext"><div>Советы по игре</div>
+				<div>Отвечая на вопросы, вы не будете знать последствия выбранных ответов, но можно и предугадать, что случится после. Например:</div>
+				<li>Вам выпал шанс подзарядиться! Все бы было хорошо, но чем больше стоишь на месте, тем выше степень обнаружения.</li> Или еще один хороший пример:
+				<li>Вы заметили выжившего робота в плену у охотников, хотите его спасти, тем самым завязав драку, получив вмятины или царапины. Вот так, лучше не рисковать 	состоянием за одного робота, а найти таких же выживших без риска.</li>
+			</p>
+			<button class="next1" id="BackRules1"><i>◀Назад</i></button>
 		</div>
 	</div>
 	<!---->
 	<script type="text/javascript">
-			let StartButton = document.getElementById('start');
+			let StartButton = document.getElementById('start'); //Кнопка начала работы сайта
 			let StartGame = document.getElementById('start_game'); //Игра
 			let StartRules = document.getElementById('start_menu'); //Правила
-			let Page1Rules1 = document.getElementById('Page1Rules1'); //Правила. Повторный запрос
-			let Page1 = document.getElementById('Page1'); //Первая страница "Меню" all_page1
+			let Page1Rules1 = document.getElementById('Page1Rules1'); //Правила. Повторный запрос с сраницы игры
+			let Page1 = document.getElementById('Page1'); //Первая страница "Меню" all_page1 0
 			let PageGame1 = document.getElementById('PageGame1'); //Первая страница игры
-			let PageRules1 = document.getElementById('PageRules1'); //Первая страница правил
-			let GameMenu = document.getElementById('GameMenu') //Кнопка возврата на страницу меню
-			let RulesMenu = document.getElementById('RulesMenu') //Кнопка возврата на страницу меню
+			let PageRules1 = document.getElementById('PageRules1'); //Первая страница правил 
+			let GameMenu = document.getElementById('GameMenu') //Кнопка возврата на страницу меню с страницы игры 0<1
+			let RulesMenu = document.getElementById('RulesMenu') //Кнопка возврата на страницу меню с траницы правил 0<1
+			let Page1Rules = document.getElementById('Page1Rules') //Отдельная страница правил 1
+			let Pag2Rules = document.getElementById('Pag2Rules') //Отдельная страница правил 2
+			let NextRules = document.getElementById('NextRules') //Кнопка переключения страницы правил 1>2
+			let BackRules1 = document.getElementById('BackRules1') //Кнопка переключения страницы правил 1<2
 
 			//Начальная кнопка на первом экране
 			StartButton.addEventListener('click', function() {
@@ -361,13 +404,22 @@
 				StartButton.style.visibility = 'visible';
 			});//Кнопка возвратит на начальную страницу
 
-			//Кнопка открывает страницу правил повторно
 			Page1Rules1.addEventListener('click', function() {
 				Page1.style.visibility = 'hidden';
 				PageGame1.style.visibility = 'hidden';
 				PageRules1.style.visibility = 'visible';
 				StartButton.style.visibility = 'hidden';
-			});//Кнопка открывает страницу правил повторно
+			});//
+
+			NextRules.addEventListener('click', function() {
+				Page1Rules.style.visibility = 'hidden';
+				Pag2Rules.style.visibility = 'visible';
+			});//
+
+			BackRules1.addEventListener('click', function() {
+				Page1Rules.style.visibility = 'visible';
+				Pag2Rules.style.visibility = 'hidden';
+			});//
 	</script>
 </body>
 </html>
