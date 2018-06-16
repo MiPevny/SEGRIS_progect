@@ -325,19 +325,23 @@
 	</div>
 	<!---->
 	<script type="text/javascript">
+		let Page1 = document.getElementById('Page1'); //Первая страница "Меню" all_page1 0
 			let StartButton = document.getElementById('start'); //Кнопка начала работы сайта
 			let StartGame = document.getElementById('start_game'); //Игра
 			let StartRules = document.getElementById('start_menu'); //Правила
-			let Page1Rules1 = document.getElementById('Page1Rules1'); //Правила. Повторный запрос с сраницы игры
-			let Page1 = document.getElementById('Page1'); //Первая страница "Меню" all_page1 0
-			let PageGame1 = document.getElementById('PageGame1'); //Первая страница игры
-			let PageRules1 = document.getElementById('PageRules1'); //Первая страница правил 
+
+		let PageGame1 = document.getElementById('PageGame1'); //Первая страница игры
 			let GameMenu = document.getElementById('GameMenu') //Кнопка возврата на страницу меню с страницы игры 0<1
+			let Page1Rules1 = document.getElementById('Page1Rules1'); //Правила. Повторный запрос с сраницы игры
+
+		let PageRules1 = document.getElementById('PageRules1'); //Первая страница правил 
 			let RulesMenu = document.getElementById('RulesMenu') //Кнопка возврата на страницу меню с траницы правил 0<1
+
 			let Page1Rules = document.getElementById('Page1Rules') //Отдельная страница правил 1
+				let NextRules = document.getElementById('NextRules') //Кнопка переключения страницы правил 1>2
+
 			let Pag2Rules = document.getElementById('Pag2Rules') //Отдельная страница правил 2
-			let NextRules = document.getElementById('NextRules') //Кнопка переключения страницы правил 1>2
-			let BackRules1 = document.getElementById('BackRules1') //Кнопка переключения страницы правил 1<2
+				let BackRules1 = document.getElementById('BackRules1') //Кнопка переключения страницы правил 1<2
 
 			//Начальная кнопка на первом экране
 			StartButton.addEventListener('click', function() {
@@ -381,8 +385,10 @@
 			GameMenu.addEventListener('click', function() {
 				Page1.style.visibility = 'visible';
 				PageGame1.style.visibility = 'hidden';
+				Page1Rules.style.visibility = 'hidden';
 				StartButton.style.visibility = 'visible';
 			});//Кнопка возвратит на начальную страницу
+
 
 			//Кнопка перехода на страницу правил на первом экране
 			StartRules.addEventListener('click', function() {
@@ -390,6 +396,7 @@
 				StartRules.style.visibility = 'hidden'
 				StartButton = document.getElementById('start');
 				StartButton.style.visibility = 'hidden';
+				Page1Rules.style.visibility = 'visible';
 
 				Page1.style.visibility = 'hidden';
 				PageGame1.style.visibility = 'hidden';
@@ -401,25 +408,33 @@
 			RulesMenu.addEventListener('click', function() {
 				Page1.style.visibility = 'visible';
 				PageRules1.style.visibility = 'hidden';
+				Page1Rules.style.visibility = 'hidden';
 				StartButton.style.visibility = 'visible';
 			});//Кнопка возвратит на начальную страницу
 
+
+			//Правила. Повторный запрос с сраницы игры
 			Page1Rules1.addEventListener('click', function() {
 				Page1.style.visibility = 'hidden';
 				PageGame1.style.visibility = 'hidden';
 				PageRules1.style.visibility = 'visible';
+				Page1Rules.style.visibility = 'visible';
 				StartButton.style.visibility = 'hidden';
-			});//
+			});//Правила. Повторный запрос с сраницы игры
 
+
+			//Кнопка переключения страницы правил 1>2
 			NextRules.addEventListener('click', function() {
 				Page1Rules.style.visibility = 'hidden';
 				Pag2Rules.style.visibility = 'visible';
-			});//
+			});//Кнопка переключения страницы правил 1>2
 
+
+			//Кнопка переключения страницы правил 1<2
 			BackRules1.addEventListener('click', function() {
 				Page1Rules.style.visibility = 'visible';
 				Pag2Rules.style.visibility = 'hidden';
-			});//
+			});//Кнопка переключения страницы правил 1<2
 	</script>
 </body>
 </html>
