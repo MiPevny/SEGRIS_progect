@@ -2,22 +2,23 @@
 <html>
 <head>
 	<title></title>
-	<style type="text/css">
+	<style>
+	/*Начальная страница сайта "Меню"*/
 		.inf {
 			margin-top: 240px;
 			font-family: sans-serif;
 			font-size: 10px;
 		}
-
 		span {
 			color: red;
 		}
-		.backtext {
-			margin-left: -300px;
+		i {
+			font-family: fantasy;
 		}
-		
-		
-		/*Начальная страница сайта "Меню"*/
+		li {
+			font-size: 20px;
+		}
+
 		.all_page1Menu {
 			width: 100%;
 			height: 800px;
@@ -34,13 +35,13 @@
 			color: #4dcfff;
 			font-size: 30px;
 			background-image: url(ForTitle.jpg);
-			width: 1200px;
+			width: 1188px;
 			height: 150px;
 			padding: 30px 20px;
 			text-shadow: 3px 4px 10px black, 0 0 1em black;
-			border-radius: 30px;
+			border-radius: 25px;
 			text-align: center;
-			margin: 0px 0px -60px 2px;
+			margin: 0px 0px -50px 0px;
 			border: 10px dashed;
 		}
 		.start {
@@ -108,12 +109,17 @@
 			color: black;
 			background-color: #00e600;
 		}
-		i {
-			font-family: fantasy;
-		}
 		/*Начальная страница сайта "Меню"*/
-		
-		/*Начальная страница игры*/
+
+
+
+
+
+
+
+
+
+	/*Начальная страница игры*/
 		.all_page1Game {
 			width: 100%;
 			height: 800px;
@@ -135,7 +141,6 @@
 			font-size: 25px;
 			font-family: sans-serif;
 			padding: 10px;
-			
 		}
 		.hero_name {
 			width: 140px;
@@ -158,13 +163,12 @@
 		.rules_repeat:hover {
 			background-color: #1aff1a;
 		}
-		.next {
+		.button_change_page {
 			width: 200px;
 			height: 40px;
-			margin: 150px 0px 0px 100px ;
+			margin: 10px 0px 0px 100px ;
 			text-align: center;
 			cursor: pointer;
-			position: relative;
 			outline: none;
 			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
 			font-size: 30px;
@@ -181,11 +185,155 @@
 		.button_hero:hover {
 			background-color: #1ac2ff;
 		}
-		/*Начальная страница игры*/
 
-		li {
-			font-size: 20px;
+
+
+
+		/*Робот*/
+		.robot {
+			width: 500px;
+			height: 500px;
+			user-select: none;
+			background-image: url(ForTitle.jpg);
+			border-radius: 0px 0px 30px 30px;
+			border: 10px dashed #4dcfff;
+			margin: 0px 0px 0px 720px;
+			visibility: hidden;
 		}
+		.top {
+			width: 500px;
+			height: 100px;
+			padding-top: 60px;
+		}
+		.body {
+			width: 500px;
+			height: 200px;
+			margin-top: -40px;
+		}
+		.bottom {
+			width: 500px;
+			height: 200px;
+			padding: 0px 0px 0px 0px;
+		}
+		.head {
+			width: 80px;
+			height: 60px;
+			background-image: url(HeadOfRobot.jpg);
+			margin: -40px 0px 0px 195px;
+			border-radius: 10px;
+		}
+		.head:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+		.arm_l {
+			width: 50px;
+			height: 200px;
+			background-image: url(LeftArm.jpg);
+			margin-left: 135px;
+			margin-top: 10px;
+			display: inline-block;
+			border-radius: 30px 0px 30px 30px;
+		}
+		.arm_l:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+		.arm_r {
+			width: 50px;
+			height: 200px;
+			background-image: url(RightArm.jpg);
+			margin-top: 10px;
+			display: inline-block;
+			border-radius: 0px 30px 30px 30px;
+		}
+		.arm_r:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+		.torso {
+			width: 100px;
+			height: 200px;
+			background-image: url(Body.jpg);
+			margin: 0px -5px 30px -5px;
+			display: inline-block;
+			border-radius: 20px;
+		}
+		.torso:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+		.leg {
+			width: 120px;
+			height: 150px;
+			background-image: url(Leg.jpg);
+			margin-left: 175px;
+			display: inline-block;
+			border-radius: 20px 20px 30px 30px;
+		}
+		.leg:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em #80ff80;
+		}
+
+		.inf_head {
+			width: 200px;
+			height: 50px;
+			background-color: #4dcfff;
+			border-radius: 20px 20px 0px 20px;
+			visibility: hidden;
+			margin: -30px 0px 0px 25px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 10px;
+		}
+		.inf_body {
+			width: 180px;
+			height: 80px;
+			background-color: #4dcfff;
+			border-radius: 20px 20px 20px 0px;
+			visibility: hidden;
+			margin: -480px 0px 0px 280px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 5px;
+		}
+		.inf_arm_l {
+			width: 130px;
+			height: 80px;
+			background-color: #4dcfff;
+			border-radius: 20px 0px 20px 20px;
+			visibility: hidden;
+			margin: 170px 0px 0px 10px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 5px;
+		}
+		.inf_arm_r {
+			width: 120px;
+			height: 100px;
+			background-color: #4dcfff;
+			border-radius: 0px 20px 20px 20px;
+			visibility: hidden;
+			margin: -200px 0px 0px 330px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 5px;
+		}
+		.inf_leg {
+			width: 120px;
+			height: 60px;
+			background-color: #4dcfff;
+			border-radius: 0px 20px 20px 20px;
+			visibility: hidden;
+			margin: 90px 0px 0px 290px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 10px;
+		}/*Робот*/
+
+
+
+
+
+
+
+
 
 		/*Начальная страница правил*/
 		.all_page1Rules {
@@ -199,7 +347,6 @@
 			user-select: none;
 			visibility: hidden;
 			margin-top: -810px;
-
 		}
 		/*1*/
 		.beginner_page1Rules {
@@ -212,18 +359,7 @@
 			font-family: sans-serif;
 			padding: 10px;
 		}
-		.next1 {
-			width: 200px;
-			height: 40px;
-			text-align: center;
-			cursor: pointer;
-			position: relative;
-			outline: none;
-			left: 10px;
-			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
-			font-size: 30px;
-		}
-		.next2 {
+		.button_next_page {
 			width: 200px;
 			height: 40px;
 			margin: 10px;
@@ -231,9 +367,14 @@
 			cursor: pointer;
 			position: relative;
 			outline: none;
-			left: 630px;
+			left: 430px;
 			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
 			font-size: 30px;
+		}
+		.text_photo_float {
+			width: 700px;
+			margin-top: -410px;
+			padding-left: 300px;
 		}/*1*/
 
 		/*2*/
@@ -247,18 +388,89 @@
 			font-family: sans-serif;
 			padding: 10px;
 			visibility: hidden;
-			margin-top: -760px;
+			margin-top: -740px;
+		}
+		.backtext {
+			
 		}/*2*/
-
-
-
-
 		/*Начальная страница правил*/
 
+
+
+
+
+
+
+		/*------------G------A----M-------E--------P----A-----G--E---S---*/
+		/*Игра*/
+		.indicators {
+			width: 507px;
+			height: 230px;
+			border: 2px solid black;
+			margin: -770px 0px 0px 720px;
+			border-radius: 30px 30px 0px 0px;
+			visibility: hidden;
+			background-image: url(ForText.jpg);
+			padding: 5px;
+		}
+		.indi {
+			font-size: 30px;
+			width: 100px;
+		}
+		.author {
+			color: #0d0d0d;
+			font-size: 30px;
+			font: cursive;
+			font-family: serif;
+		}
+		.answer {
+			font-size: 35px;
+		}
+		.answer:hover {
+			font-size: 35px;
+			color: #424242;
+		}
+		.answer:active {
+			font-size: 35px;
+			color: black;
+			text-shadow: 3px 4px 10px grey, 0 0 1em #001a00;
+		}
+		.NextText {
+			width: 200px;
+			height: 40px;
+			text-align: center;
+			cursor: pointer;
+			position: relative;
+			outline: none;
+			left: 10px;
+			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+			font-size: 30px;
+		}
+		.game_text {
+			width: 645px;
+			height: 450px;
+		}
+		.game_answers {
+			width: 645px;
+			height: 250px;
+		}/*Игра*/
+		.game_page1 {
+			background-image: url(ForText.jpg);
+			width: 650px;
+			height: 740px;
+			border-radius: 20px;
+			margin: -760px 0px 0px 20px;
+			font-size: 25px;
+			font-family: sans-serif;
+			padding: 10px;
+			visibility: hidden;
+			border: 1px solid black;
+		}
+		/*------------G------A----M-------E--------P----A-----G--E---S---*/
 	</style>
 </head>
 <body>
-	<!---->
+<!--НАЧАЛЬНАЯ СТРАНИЦА САЙТА-->
 	<div class="all_page1Menu" id="Page1">
 		<div class="title"><h1>Текстовая квест-игра "Выживший"</h1></div>
 		<button class="start" id="start">PRESS START</button>
@@ -271,60 +483,391 @@
 			<div>Summer 2018</div>
 		</div>
 	</div>
-	<!---->
+<!--НАЧАЛЬНАЯ СТРАНИЦА САЙТА-->
+
+
+
+
+
+<!--ИГРА-->
+	<!--НАЧАЛЬНАЯ СТРАНИЦА ПЕРЕД ИГРОЙ-->
 	<div class="all_page1Game" id="PageGame1">
-		<div class="beginner_page1Game">
+		<div class="beginner_page1Game" id="GamePage0">
 			<p>Приветсвуем вас в игре <i>"Выживший"</i></p>
-			<div>Здесь вам предстоит играть за робота, который остался совсем один после огромной катастрофы в далеком <i>3048</i> году. Теперь ему придется выживать и искать себе подобных, чтобы собрать все силы вместе и возродить механический мир.</div>
+			<div>Здесь вам предстоит играть за робота одного из кланов людей, которые после огромной катастрофы в далеком <i>3048</i> году вынужденны были спуститься под землю и поручить машинам выполнять сложную работу. 
+			Теперь ему придется выживать и искать себе подобных, чтобы собрать все силы вместе, объеденив все кланы.</div>
 			<div>Но было бы всё так просто? На пути вам встретятся опасности, проблемы и сложые выборы, которые повлияют на ваше дальнейшее путешествие.</div>
 			<div class="rules_repeat" id="Page1Rules1">(Советуем прочитать правила перед началом игры)</div>
 			<p>А теперь дайте имя своему герою! И наделите его навыками, которые помогут ему в дальнейшем.</p>
 			<p>Моего героя зовут <input type="text" class="hero_name" id="HeroName">, и этому роботу я даю возможность быть
 				<select class="hero_name" id="HeroClass">
 					<option></option>
-					<option id="">✚Ловким✚</option>
-					<option id="">ϟСильнымϟ</option>
-					<option id="">☯Быстрым☯</option>
+					<option>✚Ловким✚</option>
+					<option>☀Сильным☀</option>
+					<option>☯Быстрым☯</option>
 				</select>
 				<button class="button_hero" id="ButtonHero">Сохранить моего робота</button>
 			</p>
-			<div><button class="next" id="GameMenu"><i>В меню</i></button><button class="next" id="NextPage" style="margin: -150px 0px 0px 50px;">☠<i>Начать</i>☣</button></div>
+			<div>Если вы готовы начать миссию "спасения выживших", то желаем удачи в поисках! И помните, обратного пути уже не будет!</div>
+			<div><button class="button_change_page" id="GameMenu"><i>В меню</i></button>
+				<button class="button_change_page" id="NextPage" style="margin: -150px 0px 0px 50px;">☠<i>Начать</i>☣</button></div>
+		</div>
+	<!--НАЧАЛЬНАЯ СТРАНИЦА ПЕРЕД ИГРОЙ-->
+
+
+
+
+
+
+	<!--СТРАНИЦЫ ИГРЫ-->
+	<div>
+		<div class="game_page1" id="GamePage1">
+			<div class="game_text"><div><i>Ваш клан выпустил робота _<span id="RobotName"></span>_ на поверхность.</i></div>
+				<i class="author">
+					<div>"Как же здесь страшно", подумал робот. "Вокруг ни души... Песок... Один песок!"</div>
+					<div>Солнце светило так ярко, что припекало микросхемы в голове. Рядом было высохшее озеро. 
+					Вокруг стальной плиты, ведущей на базу, лежала 	куча проржавевшего металла, возможно остатки той цивилизации. А в далеке виднелись какие-то руины.</div>
+					<div>"Нужно ехать вперед и искать остальных. Но только осторожно, кто знает, что меня там ждет?"</div>
+					<div>"Я поеду, наверное..."</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page1Answer1All3">К руинам</li></i><!-- переход в JS сделан -->
+				</p>
+				<p>
+					<i><li class="answer" id="Page1Answer2All3">К высохшему озеру</li></i><!-- переход в JS сделан -->
+				</p>
+				<p>
+					<i><li class="answer" id="Page1Answer3All3">А пожалуй, останусь тут</li></i><!-- переход в JS сделан -->
+				</p>
+			</div>
+		</div>
+
+		<div class="game_page1" id="GamePage2"><!-- "Page1Answer1All3" "Page4Answer1All2"  К руинам -->
+			<div class="game_text">
+				<i class="author">
+					<div>"Они кажутся такими далекими, но это будет недолгий путь."</div>
+					<div>Здесь была дорога-но какая! Роскошная бетонная полоса была шире обычной тропы. 
+					Но в скоре путь был завален разбитыми машинами, перегораживающие метров 20 вперед.</div>
+					<di>"Эх, не проехать! Нужно как-то попасть на ту сторону. Или поехать обратно, другим путем, а может даже я смогу пробраться с боку этого завала".</di>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page2Answer1All3">Попробовать расчистить себе путь</li></i><!-- переход в JS сделан -->
+				</p>
+				<p>
+					<i><li class="answer" id="Page2Answer2All3">Попытаться объехать через кювет</li></i><!-- переход в JS сделан -->
+				</p>
+				<p>
+					<i><li class="answer" id="Page2Answer3All3">Поехать другим путем, через высохшее озеро</li></i>
+				</p>
+			</div>
+		</div>
+		
+		<div class="game_page1" id="GamePage3"><!-- "Page1Answer2All3" "Page4Answer2All2" К высохшему озеру -->
+			<div class="game_text">
+				<i class="author">
+					<div>Из-за огромных камней показалось большое поле, :"Кажется, это озеро о котором я так мало слышал от моих людей."</div>
+					<div>Возможно тут раньше был лес с буйной растительностью.</div>
+					<div>Сейчас это зрелище не приносит никакой радости...</div>
+					<div>"Потрескавшаяся земля выглядит твердой, но переходить ли мне по ней?"- засомневался робот.</div>
+					<div>"Вроде бы это лужица не такая и широкая, и мне проще будет объехать?"</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page3Answer1All3">Попробовать переехать через озеро</li></i>
+				</p>
+				<p>
+					<i><li class="answer" id="Page3Answer2All3">Объехать вокруг</li></i>
+				</p>
+				<p>
+					<i><li class="answer" id="Page3Answer3All3">Поехать другим путем, к руинам</li></i>
+				</p>
+			</div>
+		</div>
+
+		<div class="game_page1" id="GamePage4"><!-- "Page1Answer3All3" А пожалуй, останусь тут -->
+			<div class="game_text">
+				<i class="author">
+					<div>"Кажется за мной следят, я слышал какие-то звуки. Люк базы захлопнулся слишком громко, наверное, кто-то услышал меня"</div>
+					<div>"Надо убираться от сюда...и поскорей..."</div>
+					<div>"И в следующий раз постараться не издавать лишнего шума, а то поймают меня, попаду еще в непреятности..."</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page4Answer1All2">К руинам</li></i><!-- переход в JS сделан -->
+				</p>
+				<p>
+					<i><li class="answer" id="Page4Answer2All2">К высохшему озеру</li></i><!-- переход в JS сделан -->
+				</p>
+			</div>
+		</div>
+
+		<div class="game_page1" id="GamePage5"><!-- "Page3Answer3All3" Поехать другим путем, через высохшее озеро -->
+			<div class="game_text">
+				<i class="author">
+					<div>Герой попробовал другую дорогу, может ему повезет в этот раз.</div>
+					<div>"Да уж, не очень хорошая идея...Здесь я уже был и мне тут не понравилось."</div>
+					<div>"Надо мне поменьше ходить теми же путями, а то ведь выследят меня или еще чего хуже...встечусь с неприятелем лицом к лицу!"</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page5Answer1All3">Попробовать переехать через озеро</li></i>
+				</p>
+				<p>
+					<i><li class="answer" id="Page5Answer2All3">Объехать вокруг</li></i>
+				</p>
+			</div>
+		</div>
+
+		<div class="game_page1" id="GamePag6"><!--  -->
+			<div class="game_text">
+				<i class="author">
+					<div>Герой попробовал другую дорогу, может ему повезет в этот раз.</div>
+					<div>"Да уж, не очень хорошая идея...Здесь я уже был и мне тут не понравилось."</div>
+					<div>"Надо мне поменьше ходить теми же путями, а то ведь выследят меня или еще чего хуже...встечусь с неприятелем лицом к лицу!"</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				
+			</div>
+		</div>
+
+		<div class="game_page1" id="GamePage7"><!-- "Page2Answer1All3" Попробовать расчистить себе путь -->
+			<div class="game_text">
+				<i class="author">
+					<div>"Ух! Это было не легко, не думал, что машины такие тяжелы. Но зато, теперь я быстрее доберусь до цели.</div>
+					<div>Но как не кстати солнце скрылось за тучами!"</div>
+					<div></div>
+					<div>"Пока разгребал эти завалы, к сожалению, не нашел ни одного заряженного аккумулятора. Надеюсь, у меня не сядет зарядка..."</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page7Answer1All2">Продолжить путь к городу</li></i>
+				</p>
+				<p>
+					<i><li class="answer" id="Page7Answer2All2">Остаться у разбитых машин и подождать появления солнца</li></i>
+				</p>
+			</div>
+		</div>
+
+		<div class="game_page1" id="GamePage8"><!-- "Page2Answer2All3" Попытаться объехать через кювет -->
+			<div class="game_text">
+				<i class="author">
+					<div>"Надеюсь мне больше не предется портить свою подвеску"</div>
+					<div>Чтобы не застрать в ямах, пришлось совсем не останавливаться, а пролететь через кювет, как пуля</div>
+					<div>"Повезло, что я выехал еще от туда..."</div>
+
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page8Answer1All2">Продолжить путь к городу</li></i>
+				</p>
+				<p>
+					<i><li class="answer" id="Page8Answer2All2">Остаться у разбитых машин и подождать появления солнца</li></i>
+				</p>
+			</div>
+		</div>
+
+		<div class="game_page1" id="GamePage"><!--  -->
+			<div class="game_text">
+				
+			</div>
+			<div class="game_answers">
+				
+			</div>
 		</div>
 	</div>
-	<!---->
+	<!--СТРАНИЦЫ ИГРЫ-->
+
+
+
+
+
+
+
+
+
+
+	<!--ИНДИКАТОРЫ-->
+		<div class="indicators" id="Indi">
+			<div class="indi" id="Life"></div><!--✚100-->
+			<div class="indi" id="Energy"></div><!--☀ 100-->
+			<div class="indi" id="Found"></div><!--✪0-->
+			<div class="indi" id="Danger"></div><!--☯0-->
+		</div>
+	<!--ИНДИКАТОРЫ-->
+
+
+
+	<!--Робот-->
+		<div class="robot" id="Robot">
+			<div class="top">
+				<div class="inf_head" id="InfHead">
+				<b>Важый элемент вашего робота-голова!</b>
+				</div>
+				<div class="head" id="Head"></div>
+			</div>
+			<div class="body">
+				<div class="arm_l" id="ArmLeft"></div>
+				<div class="torso" id="Body"></div>
+				<div class="arm_r" id="ArmRight"></div>
+			</div>
+			<div class="bottom">
+				<div class="leg" id="Leg"></div>
+			</div>
+			<div class="inf_body" id="InfBody">
+				<b>Тело представляет собой огромную батарейку с кучей разных механизмов</b>
+			</div>
+			<div class="inf_arm_l" id="InfArmLeft">
+				<b>Рука-клешня позволяет брать разные вещи</b>
+			</div>
+			<div class="inf_arm_r" id="InfArmRight">
+				<b>Рука-бур поможет разбивать препятствия на вашем пути</b>
+			</div>
+			<div class="inf_leg" id="InfLeg">
+				<b>С хорошей подвеской и ехать приятно</b>
+			</div>
+		</div>
+		<script rc="JS/DivBot.js"></script>
+	</div>
+	<!--Робот-->
+<!--ИГРА-->
+	
+
+
+
+
+
+
+
+
+
+	<!--ПРАВИЛА-->
 	<div class="all_page1Rules" id="PageRules1">
 		<div class="beginner_page1Rules" id="Page1Rules">
-			<div>Так как это текстовой квест, здесь вам будут задаваться вопросы и предложены варианты ответов.</div>
+			<div><b>Так как это текстовой квест, здесь вам будут задаваться вопросы и предлагаться варианты ответов.</b></div>
 			<div>В игре представлены индикаторы и показатели такие как:</div>
 			<div>✚ состояние;</div>
-			<div> ϟ энергия;</div>
+			<div>☀ энергия;</div>
 			<div>✪ количество найденных роботов</div>
 			<div>☯ степень обнаружения.</div>
-			<img src="Фотографии/RobotFoto.jpg" style="float: left;margin-bottom: 0px;border: 3px solid #00cc00;border-radius: 20px;">
-			<div>←Это ваш персонаж, его можно назвать и выбрать ему способности в начале игры.</div>
-			<div>В прохождении он будет доступен как иконка, причем интерактивная. С щелчком по отдельной части робота, появится ее описание.</div>
-			<div>【Описания индикаторов героя】</div>
-			<li>Механическое состояние робота <span>невосполнимо</span> и равно ✚100. Рисковать работоспособностью, значит повлечь за собой гибель или разрушение. Берегите своего героя от повреждений!</li>
-			<li>Энергия важная штука у роботов, или как они там говорят. Иногда будет выпадать шанс подзарядиться, ибо робот с низким количеством энергии далеко не уедет.Но хорошего понемногу и поэтому, превысив отметку ϟ100, робот <span>может взорваться</span>.</li>
-			<li>По пути вы будите находить своих братьев по несчастью. Собрав их всех вместе, вы сможете пережить эту катастрофу. Количество собранных роботов - это очки. Для прохождения квеста, <span>нужно набрать</span> ✪10 очков.</li>
-			<li>Степень обнаружения показывает опасность столкновения с врагом. Максимальный уровень равен ☯10. И поверьте, лучше не знать, что произойдет, когда уровень повысится.</li>
-			<button class="next1" id="RulesMenu"><i>В меню</i></button><button class="next2" id="NextRules"><i>Вперед►</i></button>
+			<img src="RobotFoto.jpg" style="border: 3px solid #00cc00;border-radius: 20px;margin-right: 200px;">
+			<div class="text_photo_float">
+				<div><i>←Это ваш персонаж</i>, его можно назвать и выбрать ему способности в начале игры.</div>
+				<div>В прохождении он будет доступен как иконка, причем интерактивная. С щелчком по отдельной части робота, появится ее описание.</div>
+				<div><i>【Описания индикаторов героя】</i></div>
+				<li>Механическое состояние робота <span>невосполнимо</span> и равно ✚100. Рисковать работоспособностью, 
+				значит повлечь за собой гибель или разрушение, а значит проиграть. Берегите своего героя от повреждений!</li>
+				<li>Энергия важная штука у роботов, или как они там говорят. 
+				Иногда будет выпадать шанс подзарядиться, ибо робот с низким количеством энергии далеко не уедет. 
+				Если энергия полностью закончится, то игрок вынужден будет остановиться и ждать солнечных лучей.</li>
+				<li>По пути вы будете находить своих братьев по несчастью. Собрав их всех вместе, вы сможете пережить эту катастрофу. 
+				Количество собранных роботов - это очки. Для прохождения квеста, <span>нужно набрать</span> ✪10 очков.</li>
+			</div>
+			<li>Степень обнаружения показывает опасность столкновения с врагом. Максимальный уровень равен ☯10. 
+			И поверьте, лучше не знать, что произойдет, когда уровень повысится.</li>
+			<button class="button_change_page" id="RulesMenu"><i>В меню</i></button><button class="button_next_page" id="NextRules"><i>Вперед►</i></button>
 		</div>
 		<div class="beginner_page2Rules" id="Pag2Rules">
-			Способности роботу, при желании, <span>можно не выбирать</span>. Так как они облегчают прохождение квеста.
-			<li>Ловкость дает вашему герою бонус в размере ✚50, тем самым он становится менее уязвимым для атак противника.</li>
-			<li>Сила ускоряет процесс зарядки на ϟ10 и держится дольше обычного</li>
-			<li>Способность ☯Быстрый☯ позволяет роботу уходить от преследования гораздо быстее. А значет меньше риск встречи с неприятелями.</li>
-			<p class="backtext"><div>Советы по игре</div>
-				<div>Отвечая на вопросы, вы не будете знать последствия выбранных ответов, но можно и предугадать, что случится после. Например:</div>
-				<li>Вам выпал шанс подзарядиться! Все бы было хорошо, но чем больше стоишь на месте, тем выше степень обнаружения.</li> Или еще один хороший пример:
-				<li>Вы заметили выжившего робота в плену у охотников, хотите его спасти, тем самым завязав драку, получив вмятины или царапины. Вот так, лучше не рисковать 	состоянием за одного робота, а найти таких же выживших без риска.</li>
+			<i>Способности роботу</i>, при желании, <span>можно не выбирать</span>, если хочется испытать все сложности игры.ッ
+			<li>Ловкость дает вашему герою бонусом ✚50, а значит вы становитесь более живучими с 150-ми единицами.</li>
+			<li>Сила ускоряет процесс зарядки в ☀10, то есть в состоянии зарядки от солнца, энергии дается больше.</li>
+			<li>Способность ☯Быстрый☯ позволяет роботу уходить от преследования гораздо быстее. А значит меньше риск встречи с неприятелями.</li>
+			<p>
+				<div><i>На счет энергии...</i></div>
+				<div>В течении игры у вас будет меняться ее количество. За каждый сделанный ответ она будет прибавляться, при условии:</div>
+				<li>Что вы, в момент выбора ответа, стояли под солнцем</li>
+				<li>Приобрели батарею/С вами поделились зарядом</li>
+				<li>У вас не была повреждена солнечная панель</li>
+				<span>У героя не отнимается энергия, если он стоит на месте</span>
 			</p>
-			<button class="next1" id="BackRules1"><i>◀Назад</i></button>
+			<p class="backtext"><div><i>Советы по игре:</i></div>
+				<div>Отвечая на вопросы, вы не будете знать последствия выбранных ответов, но можно и предугадать, что случится после. Например:</div>
+				<li>Вам выпал шанс подзарядиться! Все бы было хорошо, но чем больше стоишь на месте, тем выше степень обнаружения.
+				</li> Или еще один хороший пример:
+				<li>Вы заметили выжившего робота в плену у охотников, хотите его спасти, тем самым завязав драку, получив вмятины или царапины. 
+				Лучше не рисковать состоянием за одного робота, а найти таких же выживших без риска.</li>
+			</p>
+
+			<button class="button_change_page" id="BackRules1"><i>◀Назад</i></button>
 		</div>
 	</div>
-	<!---->
+	<!--ПРАВИЛА-->
+
+
+
+
 	<script type="text/javascript">
+//-----------R----O------B-----O------T-------------------
+		let Head = document.getElementById('Head');
+		let Body = document.getElementById('Body');
+		let ArmLeft = document.getElementById('ArmLeft');
+		let ArmRight = document.getElementById('ArmRight');
+		let Leg = document.getElementById('Leg');
+
+		let InfHead = document.getElementById('InfHead');
+		let InfBody = document.getElementById('InfBody');
+		let InfArmLeft = document.getElementById('InfArmLeft');
+		let InfArmRight = document.getElementById('InfArmRight');
+		let InfLeg = document.getElementById('InfLeg');
+
+		Head.addEventListener('click', function() {
+			if (Head != 0) {
+				InfHead.style.visibility = 'visible'
+				Head = 0
+			} else {
+				InfHead.style.visibility = 'hidden'
+				Head = 1
+			};
+		});
+		Body.addEventListener('click', function() {
+			if (Body != 0) {
+				InfBody.style.visibility = 'visible'
+				Body = 0
+			} else {
+				InfBody.style.visibility = 'hidden'
+				Body = 1
+			};
+		});
+		ArmLeft.addEventListener('click', function() {
+			if (ArmLeft != 0) {
+				InfArmLeft.style.visibility = 'visible'
+				ArmLeft = 0
+			} else {
+				InfArmLeft.style.visibility = 'hidden'
+				ArmLeft = 1
+			};
+		});
+		ArmRight.addEventListener('click', function() {
+			if (ArmRight != 0) {
+				InfArmRight.style.visibility = 'visible'
+				ArmRight = 0
+			} else {
+				InfArmRight.style.visibility = 'hidden'
+				ArmRight = 1
+			};
+		});
+		Leg.addEventListener('click', function() {
+			if (Leg != 0) {
+				InfLeg.style.visibility = 'visible'
+				Leg = 0
+			} else {
+				InfLeg.style.visibility = 'hidden'
+				Leg = 1
+			};
+		});
+//-----------R----O------B-----O------T-------------------
+
+
+
 		let Page1 = document.getElementById('Page1'); //Первая страница "Меню" all_page1 0
 			let StartButton = document.getElementById('start'); //Кнопка начала работы сайта
 			let StartGame = document.getElementById('start_game'); //Игра
@@ -342,6 +885,24 @@
 
 			let Pag2Rules = document.getElementById('Pag2Rules') //Отдельная страница правил 2
 				let BackRules1 = document.getElementById('BackRules1') //Кнопка переключения страницы правил 1<2
+
+			let NextPage = document.getElementById('NextPage') //Начало текстовой квест-игры ☠
+
+			let Indi = document.getElementById('Indi'); //Все индикаторы в игре
+				let Life = document.getElementById('Life'); //Состояние робота
+				let Energy = document.getElementById('Energy'); //Энергия робота
+				let Found = document.getElementById('Found'); //Найденные роботы
+				let Danger = document.getElementById('Danger'); //Опасность
+
+				let LifeValue = 100;
+				let EnergyValue = 100;
+				let FoundValue = 0;
+				let DangerValue = 0;
+
+			let Robot = document.getElementById('Robot'); //Иконка робота
+			let GamePage0 = document.getElementById('GamePage0'); //Игровая страница 0
+			let GamePage1 = document.getElementById('GamePage1'); //Игровая страница 1
+
 
 			//Начальная кнопка на первом экране
 			StartButton.addEventListener('click', function() {
@@ -371,7 +932,7 @@
 				let HeroClass = document.getElementById('HeroClass'); //select all_page2
 				let ButtonHero = document.getElementById('ButtonHero'); //button all_page2
 			});//Кнопка перехода на страницу игры на первом экране
-			
+
 
 			//Сохранить имя и способность робота
 			ButtonHero.addEventListener('click', function() {
@@ -435,6 +996,197 @@
 				Page1Rules.style.visibility = 'visible';
 				Pag2Rules.style.visibility = 'hidden';
 			});//Кнопка переключения страницы правил 1<2
+
+
+			//Игровая страница 1
+			NextPage.addEventListener('click', function() {
+				GamePage0.style.visibility = 'hidden';
+				GamePage1.style.visibility = 'visible';
+				Indi.style.visibility = 'visible';
+				Robot.style.visibility = 'visible';
+			});//Игровая страница 1
+	</script>
+	<script type="text/javascript">//Страница игры
+		let GamePage2 = document.getElementById('GamePage2'); //Игровая страница 2
+		let GamePage3 = document.getElementById('GamePage3'); //Игровая страница 3
+		let GamePage4 = document.getElementById('GamePage4'); //Игровая страница 4
+		let GamePage5 = document.getElementById('GamePage5'); //Игровая страница 5
+		let GamePage6 = document.getElementById('GamePage6'); //Игровая страница 6
+		let GamePage7 = document.getElementById('GamePage7'); //Игровая страница 7
+		let GamePage8 = document.getElementById('GamePage8'); //Игровая страница 8
+		let GamePage9 = document.getElementById('GamePage9'); //Игровая страница 9
+		let GamePage10 = document.getElementById('GamePage10'); //Игровая страница 10
+		let GamePage11 = document.getElementById('GamePage11'); //Игровая страница 11
+		let GamePage12 = document.getElementById('GamePage12'); //Игровая страница 12
+		let GamePage13 = document.getElementById('GamePage13'); //Игровая страница 13
+		let GamePage14 = document.getElementById('GamePage14'); //Игровая страница 14
+		let GamePage15 = document.getElementById('GamePage15'); //Игровая страница 15
+		let GamePage16 = document.getElementById('GamePage16'); //Игровая страница 16
+		let GamePage17 = document.getElementById('GamePage17'); //Игровая страница 17
+		let GamePage18 = document.getElementById('GamePage18'); //Игровая страница 18
+		let GamePage19 = document.getElementById('GamePage19'); //Игровая страница 19
+		let GamePage20 = document.getElementById('GamePage20'); //Игровая страница 20
+		let GamePage21 = document.getElementById('GamePage21'); //Игровая страница 21
+		let GamePage22 = document.getElementById('GamePage22'); //Игровая страница 22
+		let GamePage23 = document.getElementById('GamePage23'); //Игровая страница 23
+
+		let Page1Answer1All3 = document.getElementById('Page1Answer1All3'); //1-й ответ на странице 1\
+		let Page1Answer2All3 = document.getElementById('Page1Answer2All3'); //2-й ответ на странице 1 | Выход на поверхность
+		let Page1Answer3All3 = document.getElementById('Page1Answer3All3'); //3-й ответ на странице 1/
+
+		let Page2Answer1All3 = document.getElementById('Page2Answer1All3'); //1-й ответ на странице 2\
+		let Page2Answer2All3 = document.getElementById('Page2Answer2All3'); //2-й ответ на странице 2 | К руинам
+		let Page2Answer3All3 = document.getElementById('Page2Answer3All3'); //3-й ответ на странице 2/
+
+		let Page3Answer1All3 = document.getElementById('Page3Answer1All3'); //1-й ответ на странице 3\
+		let Page3Answer2All3 = document.getElementById('Page3Answer2All3'); //2-й ответ на странице 3 | К озеру
+		let Page3Answer3All3 = document.getElementById('Page3Answer3All3'); //3-й ответ на странице 3/
+
+		let Page4Answer1All2 = document.getElementById('Page4Answer1All2'); //1-й ответ на странице 4\/ остаться
+		let Page4Answer2All2 = document.getElementById('Page4Answer2All2'); //2-й ответ на странице 4/\ у базы
+
+		let Page5Answer1All3 = document.getElementById('Page5Answer1All2'); //1-й ответ на странице 5\/ Возврат от
+		let Page5Answer2All3 = document.getElementById('Page5Answer2All3'); //2-й ответ на странице 5/\ руин к озеру
+
+		let Page6Answer1All2 = document.getElementById('Page6Answer1All2'); //1-й ответ на странице 6\/ расчистить
+		let Page6Answer2All2 = document.getElementById('Page6Answer2All2'); //2-й ответ на странице 6/\ путь
+
+		let Page7Answer1All2 = document.getElementById('Page7Answer1All2'); //1-й ответ на странице 7\/ объехать
+		let Page7Answer2All2 = document.getElementById('Page7Answer2All2'); //2-й ответ на странице 7/\ через кювет
+
+
+
+
+
+		let SaveRobot = HeroName.value; //Имя робота
+		let SaveClass = HeroClass.value; //Умение робота
+
+		//Обновление индикаторов
+		function UpdateIndi() {
+			Life.innerHTML = '✚' + LifeValue;
+			Energy.innerHTML = '☀' + EnergyValue;
+			Found.innerHTML = '✪' + FoundValue;
+			Danger.innerHTML = '☯' + DangerValue;
+		};
+		//Обновление индикаторов
+
+		//Авто-пополнение энергии на каждой странице
+		function UpdateEnergy () {
+			if (EnergyValue < 100) {
+				if (SaveClass != '☀Сильным☀') {
+					EnergyValue = EnergyValue + 1;
+					//Зарядка без способности
+				} else {
+					if (EnergyValue <= 90) {
+						EnergyValue = EnergyValue + 10;
+						//Зарядка со способностью ☀Сильным☀
+					} else {
+						EnergyValue = EnergyValue = 100;
+						//Зарядка со способностью ☀Сильным☀
+					};
+				};
+			};
+			UpdateIndi();
+		};
+	//Авто-пополнение энергии на каждой странице
+
+	//Повышение степени обнаружения
+		function UpdateDanger () {
+			if (DangerValue < 10) {
+				DangerValue = DangerValue + 1;
+				UpdateIndi();
+				console.log('Опасность увеличилась')
+				console.log(DangerValue);
+			};
+		};
+	//Повышение степени обнаружения
+
+
+UpdateIndi();//Обновление
+
+//Действия при ответах на страницах
+		Page1Answer3All3.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage4.style.visibility = 'visible';
+			GamePage1.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateDanger();//Повышение степени обнаружения
+			UpdateEnergy();//Авто-пополнение энергии
+
+			UpdateIndi();//Обновление
+		});
+
+		Page4Answer1All2.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage2.style.visibility = 'visible';
+			GamePage4.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateEnergy();//Авто-пополнение энергии
+
+			UpdateIndi();//Обновление
+		});
+
+		Page4Answer2All2
+		.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage3.style.visibility = 'visible';
+			GamePage4.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateEnergy();//Авто-пополнение энергии
+
+			UpdateIndi();//Обновление
+		});
+
+
+//Ответ 1 на странице 1
+		Page1Answer1All3.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage2.style.visibility = 'visible';
+			GamePage1.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateEnergy();//Авто-пополнение энергии
+
+			UpdateIndi();//Обновление
+		});
+
+
+		Page1Answer2All3.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage3.style.visibility = 'visible';
+			GamePage1.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateEnergy();//Авто-пополнение энергии
+
+			UpdateIndi();//Обновление
+		});
+
+		Page2Answer1All3.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage5.style.visibility = 'visible';
+			GamePage2.style.visibility = 'hidden';
+			//Переключение завершено
+
+			EnergyValue = EnergyValue - 20;//Робот потерял заряд
+
+			UpdateIndi();//Обновление
+		});
+
+		Page2Answer2All3.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage6.style.visibility = 'visible';
+			GamePage2.style.visibility = 'hidden';
+			//Переключение завершено
+
+			LifeValue = LifeValue - 2;//Робот повредился
+			EnergyValue = EnergyValue - 10;//Робот потерял заряд
+
+			UpdateIndi();//Обновление
+		});
 	</script>
 </body>
 </html>
