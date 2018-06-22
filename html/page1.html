@@ -425,6 +425,7 @@
 		.game_text {
 			width: 645px;
 			height: 450px;
+			display: inline-block;
 		}
 		.game_answers {
 			width: 645px;
@@ -475,7 +476,7 @@
 			<div>Но было бы всё так просто? На пути вам встретятся опасности, проблемы и сложые выборы, которые повлияют на ваше дальнейшее путешествие.</div>
 			<div class="rules_repeat" id="Page1Rules1">(Советуем прочитать правила перед началом игры)</div>
 			<p>А теперь дайте имя своему герою! И наделите его навыками, которые помогут ему в дальнейшем.</p>
-			<p>Моего героя зовут <input type="text" class="hero_name" id="HeroName">, и этому роботу я даю возможность быть
+			<p>Моего героя зовут <input type="text" maxlength="16" class="hero_name" id="HeroName">, и этому роботу я даю возможность быть
 				<select class="hero_name" id="HeroClass">
 					<option></option>
 					<option>✚Ловким✚</option>
@@ -498,7 +499,7 @@
 	<!--СТРАНИЦЫ ИГРЫ-->
 	<div>
 		<div class="game_page1" id="GamePage1">
-			<div class="game_text"><div><i>Ваш клан выпустил робота _<span id="RobotName"></span>_ на поверхность.</i></div>
+			<div class="game_text"><div><i>Ваш клан выпустил робота на поверхность.</i></div>
 				<i class="author">
 					<div>"Как же здесь страшно", подумал робот. "Вокруг ни души... Песок... Один песок!"</div>
 					<div>Солнце светило так ярко, что припекало микросхемы в голове. Рядом было высохшее озеро. 
@@ -633,10 +634,10 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page7Answer1All2">Продолжить путь к городу</li></i>
+					<i><li class="answer" id="Page7Answer1All2">Продолжить путь к городу</li></i><!-- переход в JS сделан -->
 				</p>
 				<p>
-					<i><li class="answer" id="Page7Answer2All2">Остаться у разбитых машин и подождать появления солнца</li></i>
+					<i><li class="answer" id="Page7Answer2All2">Остаться у разбитых машин и подождать появления солнца</li></i><!-- переход в JS сделан -->
 				</p>
 			</div>
 		</div>
@@ -652,10 +653,10 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page8Answer1All2">Продолжить путь к городу</li></i>
+					<i><li class="answer" id="Page8Answer1All2">Продолжить путь к городу</li></i><!-- переход в JS сделан -->
 				</p>
 				<p>
-					<i><li class="answer" id="Page8Answer2All2">Остаться у разбитых машин и подождать появления солнца</li></i>
+					<i><li class="answer" id="Page8Answer2All2">Остаться у разбитых машин и подождать появления солнца</li></i><!-- переход в JS сделан -->
 				</p>
 			</div>
 		</div>
@@ -673,11 +674,11 @@
 					<i><li class="answer" id="Page9Answer1All2">Быстро перебраться на другую сторону</li></i>
 				</p>
 				<p>
-					<i><li class="answer" id="Page9Answer2All2">Выехать обратно на берег</li></i>
+					<i><li class="answer" id="Page9Answer2All2">Выехать обратно на берег</li></i> не работает
 				</p>
 			</div>
 		</div>
-		<div class="game_page1" id="GamePage10"><!-- Page6Answer2All2 -->
+		<div class="game_page1" id="GamePage10"><!-- Page6Answer2All2 Page17Answer2All2 -->
 			<div class="game_text">
 				<i class="author">
 					<di>Пока робот объезжал озеро со стороны, он заметил следы.</di>
@@ -692,7 +693,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="game_page1" id="GamePage11"><!-- Page9Answer1All2 -->
+		<div class="game_page1" id="GamePage11"><!-- Page9Answer1All2 Page17Answer1All2 -->
 			<div class="game_text">
 				<i class="author">
 					<div>"О боже, я чуть не утонул! Больше никогда не буду рисковать, я ели выбрался из этой ловушки..."</div>
@@ -741,14 +742,14 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page13Answer1All">Проверить источник шума</li></i>
+					<i><li class="answer" id="Page13Answer1All">Проверить источник шума во дворе</li></i>
 				</p>
 				<p>
 					<i><li class="answer" id="Page13Answer2All2">Проехать мимо, дальше по улице</li></i>
 				</p>
 			</div>
 		</div>
-		<div class="game_page1" id="GamePage14"><!-- Page11Answer2All2 Page12Answer2All2 -->
+		<div class="game_page1" id="GamePage14"><!-- Page11Answer2All2 Page12Answer2All2 Page16Answer1All1-->
 			<div class="game_text">
 				<i class="author">
 					<div>За озером находилась старая лесопилка. Что-то напоминающее бревна деревьев, лежало в огромном количестве разбросанное по поляне.</div>
@@ -759,10 +760,10 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page14Answer1All2">Проверить источник шума</li></i>
+					<i><li class="answer" id="Page14Answer1All2">Проверить источник шума у дома</li></i>
 				</p>
 				<p>
-					<i><li class="answer" id="Page14Answer2All2">Убраться подальше от лесопилки</li></i>
+					<i><li class="answer" id="Page14Answer2All2">Проехать мимо лесопилки, дальше</li></i>
 				</p>
 			</div>
 		</div>
@@ -806,14 +807,63 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page17Answer1All3">Быстро перебраться на другую сторону</li></i>
+					<i><li class="answer" id="Page17Answer1All2">Быстро перебраться на другую сторону</li></i>
 				</p>
 				<p>
-					<i><li class="answer" id="Page17Answer2All3">Объехать вокруг</li></i>
+					<i><li class="answer" id="Page17Answer2All2">Объехать вокруг</li></i>
 				</p>
 			</div>
 		</div>
 
+		<div class="game_page1" id="GamePage18"><!-- Page13Answer1All -->
+			<div class="game_text">
+				<i class="author">
+					<div>Оказалось, что шум устроил другой робот, перелезая через забор, он упал на бак с мусором, а выбраться не смог.</div>
+					<div>"Эй! Помоги мне, я попал в ловушку. Я тут, в баке!"</div>
+					<div>"Давай руку!"-уверенно сказал герой и протянул новому другу механическую клешню.</div>
+					<div>"Спасибо"-сказал тот.</div>
+					<div>После разговора новый друг, и наш <i id="Name1"></i> отправились своими дорогами.</div>
+					<div>"Как хорошо, что я нашел его, а то попал бы в беду. Он мне сказал, что тут недалеко есть база...может мне ее проверить?"</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page18Answer1All1">Выехать обратно на улицу со двора</li></i>
+				</p>
+			</div>
+		</div>
+
+		<div class="game_page1" id="GamePage19"><!-- Page14Answer1All2 -->
+			<div class="game_text">
+				<i class="author">
+					<div>Оказалось, что шум устроил другой робот, переходя по бревну, он упал и его завалило.</div>
+					<div>"Эй! Помоги мне, я попал в ловушку. Я тут, под бревном!"</div>
+					<div>"Давай руку!"-уверенно сказал герой и протянул новому другу механическую клешню.</div>
+					<div>"Спасибо"-сказал тот.</div>
+					<div>После разговора новый друг, и наш <i id="Name2"></i> отправились своими дорогами.</div>
+					<div>"Как хорошо, что я нашел его, а то попал бы в беду. Он мне сказал, что тут недалеко есть база...может мне ее проверить?"</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page19Answer1All1">Выехать обратно на дорогу к бывшему лесу</li></i>
+				</p>
+			</div>
+		</div>
+		
+		<div class="game_page1" id="GamePage20"><!--  -->
+			<div class="game_text">
+				<i class="author">
+					
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page20Answer1All1"></li></i>
+				</p>
+			</div>
+		</div>
+		
 		<div class="game_page1" id="GamePage"><!--  -->
 			<div class="game_text">
 				<i class="author">
@@ -824,7 +874,29 @@
 				
 			</div>
 		</div>
-
+		
+		<div class="game_page1" id="GamePage"><!--  -->
+			<div class="game_text">
+				<i class="author">
+					
+				</i>
+			</div>
+			<div class="game_answers">
+				
+			</div>
+		</div>
+		
+		<div class="game_page1" id="GamePage"><!--  -->
+			<div class="game_text">
+				<i class="author">
+					
+				</i>
+			</div>
+			<div class="game_answers">
+				
+			</div>
+		</div>
+		
 		<div class="game_page1" id="GamePage"><!--  -->
 			<div class="game_text">
 				<i class="author">
@@ -861,7 +933,7 @@
 
 	<!--ИНДИКАТОРЫ-->
 		<div class="indicators" id="Indi">
-			<div class="name" id="Name"></div>
+			<div class="name" id="Name5"></div>
 
 			<div class="indi" id="Life"></div><!--✚100-->
 			<div class="indi" id="Energy"></div><!--☀ 100-->
@@ -1142,7 +1214,12 @@
 			NextPage.addEventListener('click', function() {
 				let SaveRobot = HeroName.value; //Имя робота
 				let SaveClass = HeroClass.value; //Умение робота
-				let Name = document.getElementById('Name')
+				let Name1 = document.getElementById('Name1');
+				let Name2 = document.getElementById('Name2');
+				let Name3 = document.getElementById('Name3');
+				let Name4 = document.getElementById('Name4');
+				let Name5 = document.getElementById('Name5');
+				console.log(Name2);
 				if (SaveRobot == '') {
 					SaveRobot = 'BOT-1'
 				};
@@ -1151,8 +1228,12 @@
 				Indi.style.visibility = 'visible';
 				Robot.style.visibility = 'visible';
 				console.log(SaveRobot + SaveClass);
-				RobotName.innerHTML = SaveRobot;
-				Name.innerHTML = SaveRobot;
+
+				Name1.innerHTML = SaveRobot;
+				Name2.innerHTML = SaveRobot;
+				Name3.innerHTML = SaveRobot;
+				Name4.innerHTML = SaveRobot;
+				Name5.innerHTML = SaveRobot;
 			});//Игровая страница 1
 		
 
@@ -1227,6 +1308,8 @@
 		let Page15Answer1All1 = document.getElementById('Page15Answer1All1'); //1-й ответ на странице 15 |
 
 		let Page16Answer1All1 = document.getElementById('Page16Answer1All1'); //1-й ответ на странице 16 |
+
+		Page19Answer1All1
 
 		let SaveClass = HeroClass.value; //Умение робота
 
@@ -1518,6 +1601,24 @@
 			UpdateIndi();//Обновление
 		});
 
+		Page13Answer1All.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage18.style.visibility = 'visible';
+			GamePage13.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
+		Page14Answer1All2.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage19.style.visibility = 'visible';
+			GamePage14.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
 		Page15Answer1All1.addEventListener('click', function() {
 			//Переключение страниц
 			GamePage13.style.visibility = 'visible';
@@ -1536,6 +1637,24 @@
 			UpdateIndi();//Обновление
 		});
 
+
+		Page17Answer1All2.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage11.style.visibility = 'visible';
+			GamePage17.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
+		Page17Answer2All2.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage10.style.visibility = 'visible';
+			GamePage17.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
 	</script>
 </body>
 </html>
