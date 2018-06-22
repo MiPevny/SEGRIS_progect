@@ -376,11 +376,18 @@
 			width: 507px;
 			height: 230px;
 			border: 2px solid black;
-			margin: -770px 0px 0px 720px;
+			margin: -800px 0px 0px 720px;
 			border-radius: 30px 30px 0px 0px;
 			visibility: hidden;
 			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/ForText.jpg);
 			padding: 5px;
+		}
+		.name {
+			width: ;
+			height: ;
+			margin: 0px 0px 0px 0px;
+			font-size: 40px;
+			font-family: fantasy;
 		}
 		.indi {
 			font-size: 30px;
@@ -576,7 +583,7 @@
 			</div>
 		</div>
 
-		<div class="game_page1" id="GamePage5"><!-- "" Поехать другим путем, через высохшее озеро -->
+		<div class="game_page1" id="GamePage5"><!-- "Page3Answer3All3" Поехать другим путем, через высохшее озеро -->
 			<div class="game_text">
 				<i class="author">
 					<div>Герой попробовал другую дорогу, может ему повезет в этот раз.</div>
@@ -854,6 +861,8 @@
 
 	<!--ИНДИКАТОРЫ-->
 		<div class="indicators" id="Indi">
+			<div class="name" id="Name"></div>
+
 			<div class="indi" id="Life"></div><!--✚100-->
 			<div class="indi" id="Energy"></div><!--☀ 100-->
 			<div class="indi" id="Found"></div><!--✪0-->
@@ -1038,8 +1047,8 @@
 				let Energy = document.getElementById('Energy'); //Энергия робота
 				let Found = document.getElementById('Found'); //Найденные роботы
 				let Danger = document.getElementById('Danger'); //Опасность
-				let LifeValue = 100;
-				let EnergyValue = 100;
+				let LifeValue = 90;
+				let EnergyValue = 80;
 				let FoundValue = 0;
 				let DangerValue = 0;
 			let Robot = document.getElementById('Robot'); //Иконка робота
@@ -1131,13 +1140,23 @@
 			
 			//Игровая страница 1
 			NextPage.addEventListener('click', function() {
+				let SaveRobot = HeroName.value; //Имя робота
+				let SaveClass = HeroClass.value; //Умение робота
+				let Name = document.getElementById('Name')
+				if (SaveRobot == '') {
+					SaveRobot = 'BOT-1'
+				};
 				GamePage0.style.visibility = 'hidden';
 				GamePage1.style.visibility = 'visible';
 				Indi.style.visibility = 'visible';
 				Robot.style.visibility = 'visible';
+				console.log(SaveRobot + SaveClass);
+				RobotName.innerHTML = SaveRobot;
+				Name.innerHTML = SaveRobot;
 			});//Игровая страница 1
-	</script>
-	<script type="text/javascript">//Страница игры
+		
+
+		//Страница игры
 		let GamePage2 = document.getElementById('GamePage2'); //Игровая страница 2
 		let GamePage3 = document.getElementById('GamePage3'); //Игровая страница 3
 		let GamePage4 = document.getElementById('GamePage4'); //Игровая страница 4
@@ -1222,10 +1241,7 @@
 		//Авто-пополнение энергии на каждой странице
 		function UpdateEnergy () {
 			if (EnergyValue < 100) {
-				if (SaveClass != '☀Сильным☀') {
-					EnergyValue = EnergyValue + 1;
-					//Зарядка без способности
-				} else {
+				if (SaveClass == '☀Сильным☀') {
 					if (EnergyValue <= 90) {
 						EnergyValue = EnergyValue + 10;
 						//Зарядка со способностью ☀Сильным☀
@@ -1233,6 +1249,9 @@
 						EnergyValue = EnergyValue = 100;
 						//Зарядка со способностью ☀Сильным☀
 					};
+				} else {
+					EnergyValue = EnergyValue + 1;
+					//Зарядка без способности
 				};
 			};
 			UpdateIndi();
@@ -1243,7 +1262,6 @@
 			if (DangerValue < 10) {
 				DangerValue = DangerValue + 1;
 				UpdateIndi();
-				console.log('Опасность увеличилась')
 				console.log(DangerValue);
 			};
 		};
@@ -1255,8 +1273,9 @@
 			GamePage4.style.visibility = 'visible';
 			GamePage1.style.visibility = 'hidden';
 			//Переключение завершено
-			UpdateDanger();//Повышение степени обнаружения
-			UpdateEnergy();//Авто-пополнение энергии
+			
+			UpdateDanger();//Опасность увеличилась
+			UpdateEnergy();//Авто-пополнение энергии (1 или 10)
 			UpdateIndi();//Обновление
 		});
 
@@ -1265,7 +1284,8 @@
 			GamePage2.style.visibility = 'visible';
 			GamePage4.style.visibility = 'hidden';
 			//Переключение завершено
-			UpdateEnergy();//Авто-пополнение энергии
+			
+			UpdateEnergy();//Авто-пополнение энергии (1 или 10)
 			UpdateIndi();//Обновление
 		});
 
@@ -1275,7 +1295,8 @@
 			GamePage2.style.visibility = 'visible';
 			GamePage1.style.visibility = 'hidden';
 			//Переключение завершено
-			UpdateEnergy();//Авто-пополнение энергии
+			
+			UpdateEnergy();//Авто-пополнение энергии (1 или 10)
 			UpdateIndi();//Обновление
 		});
 
@@ -1284,7 +1305,8 @@
 			GamePage3.style.visibility = 'visible';
 			GamePage1.style.visibility = 'hidden';
 			//Переключение завершено
-			UpdateEnergy();//Авто-пополнение энергии
+			
+			UpdateEnergy();//Авто-пополнение энергии (1 или 10)
 			UpdateIndi();//Обновление
 		});
 
@@ -1293,6 +1315,7 @@
 			GamePage7.style.visibility = 'visible';
 			GamePage2.style.visibility = 'hidden';
 			//Переключение завершено
+
 			EnergyValue = EnergyValue - 20;//Робот потерял заряд
 			UpdateIndi();//Обновление
 		});
@@ -1302,6 +1325,7 @@
 			GamePage8.style.visibility = 'visible';
 			GamePage2.style.visibility = 'hidden';
 			//Переключение завершено
+
 			LifeValue = LifeValue - 2;//Робот повредился
 			EnergyValue = EnergyValue - 10;//Робот потерял заряд
 			UpdateIndi();//Обновление
@@ -1334,12 +1358,39 @@
 			UpdateIndi();//Обновление
 		});
 
+		Page3Answer3All3.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage5.style.visibility = 'visible';
+			GamePage3.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
 		Page4Answer2All2.addEventListener('click', function() {
 			//Переключение страниц
 			GamePage3.style.visibility = 'visible';
 			GamePage4.style.visibility = 'hidden';
 			//Переключение завершено
-			UpdateEnergy();//Авто-пополнение энергии
+			
+			UpdateIndi();//Обновление
+		});
+
+		Page5Answer1All3.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage7.style.visibility = 'visible';
+			GamePage5.style.visibility = 'hidden';
+			//Переключение завершено
+			
+			UpdateIndi();//Обновление
+		});
+
+		Page5Answer2All3.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage8.style.visibility = 'visible';
+			GamePage5.style.visibility = 'hidden';
+			//Переключение завершено
+			
 			UpdateIndi();//Обновление
 		});
 
@@ -1377,6 +1428,7 @@
 			GamePage7.style.visibility = 'hidden';
 			//Переключение завершено
 
+			EnergyValue = 100;
 			UpdateIndi();//Обновление
 		});
 
@@ -1395,6 +1447,7 @@
 			GamePage8.style.visibility = 'hidden';
 			//Переключение завершено
 
+			EnergyValue = 100;
 			UpdateIndi();//Обновление
 		});
 
@@ -1432,6 +1485,7 @@
 			GamePage11.style.visibility = 'hidden';
 			//Переключение завершено
 
+			EnergyValue = 100;
 			UpdateIndi();//Обновление
 		});
 
@@ -1450,6 +1504,7 @@
 			GamePage12.style.visibility = 'hidden';
 			//Переключение завершено
 
+			EnergyValue = 100;
 			UpdateIndi();//Обновление
 		});
 
