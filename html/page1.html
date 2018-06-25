@@ -637,6 +637,14 @@
 			visibility: hidden;
 			border: 1px solid black;
 		}
+		.my_life {
+			width: 300px;
+			height: 200px;
+			background-color: grey;
+			margin: -400px 0px 0px 950px;
+			padding: 10px
+			border-radius: 15px;
+		}
 		/*------------G------A----M-------E--------P----A-----G--E---S---*/
 	</style>
 </head>
@@ -1237,7 +1245,7 @@
 			<div class="game_text">
 				<i class="author">
 					<div>Наш герой знал, на что идет. И принял решение спасти заложника, но для этого нужно было сначало разобраться со злодеем!</div>
-					<div>"Я готов сразиться с ним! Поехали!"</div>
+					<div>"Я готов сразиться с ним! Мне везет, солнце на моей стороне! Хоть заряжусь во время битвы! Поехали!"</div>
 				</i>
 			</div>
 			<div class="game_answers">
@@ -1251,7 +1259,7 @@
 			<div class="game_text">
 				<i class="author">
 					<div>Наш герой знал, на что идет. И принял решение спасти заложника, но для этого нужно было сначало разобраться со злодеем!</div>
-					<div>"Я готов сразиться с ним! Поехали!"</div>
+					<div>"Я готов сразиться с ним! Мне везет, солнце на моей стороне! Хоть заряжусь во время битвы! Поехали!"</div>
 				</i>
 			</div>
 			<div class="game_answers">
@@ -1487,6 +1495,14 @@
 			<b>Ударив в ноги, вы нанесете -4 урона. Но потеряете -2 энергии</b>
 		</div>
 	</div>
+	<div class="my_life">
+		<div class="name" id="Name2"></div>
+
+		<div class="indi" id="Life1"></div><!--✚100-->
+		<div class="indi" id="Energy1"></div><!--☀ 100-->
+		<div class="indi" id="Found1"></div><!--✪0-->
+		<div class="indi" id="Danger1"></div><!--☯0-->
+	</div>
 	<!--СКРИПТ ЗЛОГО РОБОТА-->
 	<script src=""></script>
 	<!--СКРИПТ ЗЛОГО РОБОТА-->
@@ -1712,6 +1728,11 @@
 				let FoundValue = 0;
 				let DangerValue = 0;
 
+				let Life1 = document.getElementById('Life1'); //Состояние робота во время сражения(Life1 == Life)
+				let Energy1 = document.getElementById('Energy1'); //Энергия робота во время сражения(Energy1 == Energy)
+				let Found1 = document.getElementById('Found1'); //Найденные роботы во время сражения(Found1 == Found)
+				let Danger1 = document.getElementById('Danger1'); //Опасность во время сражения(Danger1 == Danger)
+
 				UpdateIndi();//Обновление
 
 			let Robot = document.getElementById('Robot'); //Иконка робота
@@ -1820,7 +1841,7 @@
 				DopRule.style.visibility = 'visible';//самодельный alert-подсказка
 
 				//Name1.innerHTML = SaveRobot;
-				//Name2.innerHTML = SaveRobot;
+				Name2.innerHTML = SaveRobot;
 				Name3.innerHTML = SaveRobot;
 				Name4.innerHTML = SaveRobot;
 				Name5.innerHTML = SaveRobot;
@@ -1835,9 +1856,26 @@
 		
 
 		//Страница игры
+		//EvilHead;-20 -10
+		//EvilBody;-10 -5
+		//EvilArmLeft;-6 -3
+		//EvilArmRight;-6 -3
+		//EvilLeg;-4 -2
+
+		// LifeValue = 100;
+		// EnergyValue = 100;
+		// FoundValue = 0;
+		// DangerValue = 0;
+
+		//Life1.innerHTML = 
+		//Energy1.innerHTML = 
+		//Found1.innerHTML = 
+		//Danger1.innerHTML = 
+
 		let DopRule = document.getElementById('DopRule');//самодельный alert-подсказка
 		let PageGame2 = document.getElementById('PageGame2');//Страница драки
 		let LifeEvil = document.getElementById('LifeEvil'); //Жизнь робота-охотника
+		let LifeEvilValue = 100;//Жизнь робота-охотника
 		let PageGame3 = document.getElementById('PageGame3');//Карта
 		
 		CloseAlert.addEventListener('click', function() {
@@ -1845,6 +1883,65 @@
 			DopRule.style.visibility = 'hidden';//самодельный alert-подсказка
 		});
 
+		LifeEvil.innerHTML = LifeEvilValue;
+		Life1.innerHTML = '✚' + LifeValue;
+		Energy1.innerHTML = '☀' + EnergyValue;
+
+		EvilHead.addEventListener('click', function() {
+			if (LifeEvilValue > 0) {
+				LifeEvilValue = LifeEvilValue - 20
+				LifeEvil.innerHTML = LifeEvilValue;
+				EnergyValue = EnergyValue - 10;
+			};
+			Life1.innerHTML = '✚' + LifeValue;
+			Energy1.innerHTML = '☀' + EnergyValue;
+			UpdateEnergy();
+			console.log(EnergyValue);
+		});
+		EvilBody.addEventListener('click', function() {
+			if (LifeEvilValue > 0) {
+				LifeEvilValue = LifeEvilValue - 10;
+				LifeEvil.innerHTML = LifeEvilValue;
+				EnergyValue = EnergyValue - 5;
+			};
+			Life1.innerHTML = '✚' + LifeValue;
+			Energy1.innerHTML = '☀' + EnergyValue;
+			UpdateEnergy();
+			console.log(EnergyValue);
+		});
+		EvilArmLeft.addEventListener('click', function() {
+			if (LifeEvilValue > 0) {
+				LifeEvilValue = LifeEvilValue - 6;
+				LifeEvil.innerHTML = LifeEvilValue;
+				EnergyValue = EnergyValue - 3;
+			};
+			Life1.innerHTML = '✚' + LifeValue;
+			Energy1.innerHTML = '☀' + EnergyValue;
+			UpdateEnergy();
+			console.log(EnergyValue);
+		});
+		EvilArmRight.addEventListener('click', function() {
+			if (LifeEvilValue > 0) {
+				LifeEvilValue = LifeEvilValue - 6;
+				LifeEvil.innerHTML = LifeEvilValue;
+				EnergyValue = EnergyValue - 3;
+			};
+			Life1.innerHTML = '✚' + LifeValue;
+			Energy1.innerHTML = '☀' + EnergyValue;
+			UpdateEnergy();
+			console.log(EnergyValue);
+		});
+		EvilLeg.addEventListener('click', function() {
+			if (LifeEvilValue > 0) {
+				LifeEvilValue = LifeEvilValue - 4;
+				LifeEvil.innerHTML = LifeEvilValue;
+				EnergyValue = EnergyValue - 2;
+			};
+			Life1.innerHTML = '✚' + LifeValue;
+			Energy1.innerHTML = '☀' + EnergyValue;
+			UpdateEnergy();
+			console.log(EnergyValue);
+		});
 
 		let GamePage2 = document.getElementById('GamePage2'); //Игровая страница 2
 		let GamePage3 = document.getElementById('GamePage3'); //Игровая страница 3
@@ -1966,33 +2063,219 @@
 
 		let SaveClass = HeroClass.value; //Умение робота
 
-		//Обновление индикаторов
-		function UpdateIndi() {
+	//Система автоматического определения урона, наносимого врагом роботу
+		function BattleRules () {
+			if (DangerValue < 10) {
+				if (DangerValue == 3) {
+					LifeEvil.innerHTML = 10;
+					LifeValue = LifeValue - PushEasy(1, 7);
+				};
+				if (DangerValue == 4) {
+					LifeEvil.innerHTML = 20;
+					LifeValue = LifeValue - PushEasy(1, 7);
+				};
+				if (DangerValue == 5) {
+					LifeEvil.innerHTML = 30;
+					LifeValue = LifeValue - Push(1, 5);
+				};
+				if (DangerValue == 6) {
+					LifeEvil.innerHTML = 40;
+					LifeValue = LifeValue - Push(1, 5);
+				};
+				if (DangerValue == 7) {
+					LifeEvil.innerHTML = 50;
+					LifeValue = LifeValue - PushShoot(1, 9);
+				};
+				if (DangerValue == 8) {
+					LifeEvil.innerHTML = 50;
+					LifeValue = LifeValue - PushShoot(1, 9);
+				};
+				if (DangerValue == 9) {
+					LifeEvil.innerHTML = 50;
+					LifeValue = LifeValue - PushShootHard(1, 7);
+				};
+			} else {
+				//GameOver - тип будущая функция, которая заканчивает всю эту игру...
+			};
+			function PushEasy (min, max) {
+				let a = min + Math.random() * (max - min);
+				if (SaveClass == '✚Ловким✚') {
+					let BotLife = 150;
+				} else {
+					let BotLife = 100;
+				};
+				a = Math.round(a);
+				
+				switch(a) {
+					case 1:
+					BotLife-20;//
+					break;
+					case 2:
+					BotLife-15;//
+					break;
+					case 3:
+					BotLife-10;//
+					break;
+					case 4:
+					BotLife-5;//
+					break;
+					case 5:
+					BotLife-5;//
+					break;
+					case 6:
+					BotLife-0;//
+					break;
+					case 7:
+					BotLife-0;//
+					break;
+				};
+
+			};
+			function Push (min, max) {
+				let a = min + Math.random() * (max - min);
+				if (SaveClass == '✚Ловким✚') {
+					let BotLife = 150;
+				} else {
+					let BotLife = 100;
+				};
+				a = Math.round(a);
+				
+				switch(a) {
+					case 1:
+					BotLife-20;//
+					break;
+					case 2:
+					BotLife-15;//
+					break;
+					case 3:
+					BotLife-10;//
+					break;
+					case 4:
+					BotLife-5;//
+					break;
+					case 5:
+					BotLife-5;//
+					break;
+				};
+
+			};
+			function PushShoot (min, max) {
+				let a = min + Math.random() * (max - min);
+				if (SaveClass == '✚Ловким✚') {
+					let BotLife = 150;
+				} else {
+					let BotLife = 100;
+				};
+				a = Math.round(a);
+				
+				switch(a) {
+					case 1:
+					BotLife-25;//
+					break;
+					case 2:
+					BotLife-20;//
+					break;
+					case 3:
+					BotLife-20;//
+					break;
+					case 4:
+					BotLife-15;//
+					break;
+					case 5:
+					BotLife-15;//
+					break;
+					case 6:
+					BotLife-10;//
+					break;
+					case 7:
+					BotLife-5;//
+					break;
+					case 8:
+					BotLife-5;//
+					break;
+					case 9:
+					BotLife-0;//
+					break;
+				};
+
+			};
+			function PushShootHard (min, max) {
+				let a = min + Math.random() * (max - min);
+				if (SaveClass == '✚Ловким✚') {
+					let BotLife = 150;
+				} else {
+					let BotLife = 100;
+				};
+				a = Math.round(a);
+				
+				switch(a) {
+					case 1:
+					BotLife-25;//
+					break;
+					case 2:
+					BotLife-20;//
+					break;
+					case 3:
+					BotLife-25;//
+					break;
+					case 4:
+					BotLife-20;//
+					break;
+					case 5:
+					BotLife-25;//
+					break;
+					case 6:
+					BotLife-20;//
+					break;
+					case 7:
+					BotLife-25;//
+					break;
+				};
+
+			};
+		};
+		//При повреждении ноги(удар) - 10
+		//При повреждении руки-клешня(удар) - 5          
+		//При повреждении руки-бур(удар) - 5
+		//При повреждении тела(удар) - 15
+		//При повреждении головы(удар) - 20
+		//При повреждении ноги(выстрел) - 15
+		//При повреждении тела(выстрел) - 20
+		//При повреждении головы(выстрел) - 25
+	//Система автоматического определения урона, наносимого врагом роботу
+
+	//Обновление индикаторов
+		function UpdateIndi () {
 			Life.innerHTML = '✚' + LifeValue;
 			Energy.innerHTML = '☀' + EnergyValue;
 			Found.innerHTML = '✪' + FoundValue;
 			Danger.innerHTML = '☯' + DangerValue;
 		};
-		//Обновление индикаторов
-		//Авто-пополнение энергии на каждой странице
+	//Обновление индикаторов
+
+	//Авто-пополнение энергии на каждой странице
 		function UpdateEnergy () {
 			if (EnergyValue < 100) {
 				if (SaveClass == '☀Сильным☀') {
 					if (EnergyValue <= 90) {
 						EnergyValue = EnergyValue + 10;
+						UpdateIndi();//Обновление
 						//Зарядка со способностью ☀Сильным☀
 					} else {
 						EnergyValue = EnergyValue = 100;
+						UpdateIndi();//Обновление
 						//Зарядка со способностью ☀Сильным☀
 					};
 				} else {
 					EnergyValue = EnergyValue + 1;
+					UpdateIndi();//Обновление
 					//Зарядка без способности
 				};
 			};
 			UpdateIndi();
 		};
 	//Авто-пополнение энергии на каждой странице
+
 	//Повышение степени обнаружения
 		function UpdateDanger () {
 			if (DangerValue < 10) {
@@ -2004,12 +2287,12 @@
 
 
 	//правила изменения игровых показателей
-		function RulesIndi () {
-			let LifeRule
-			let EnergyRule
-			let FoundRule
-			let DangerRule
-		};
+	//	function RulesIndi () {
+	//		let LifeRule
+	//		let EnergyRule
+	//		let FoundRule
+	//		let DangerRule
+	//	};
 	//правила изменения игровых показателей
 
 //Действия при ответах на страницах
