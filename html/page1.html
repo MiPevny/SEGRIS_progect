@@ -6,7 +6,7 @@
 	<style>
 	/*Начальная страница сайта "Меню"*/
 		.inf {
-			margin-top: 240px;
+			margin-top: 225px;
 			font-family: sans-serif;
 			font-size: 10px;
 		}
@@ -21,7 +21,7 @@
 		}
 		.all_page1Menu {
 			width: 100%;
-			height: 800px;
+			height: 850px;
 			margin-left: -5px;
 			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/background.jpg);
 			background-size: cover;
@@ -113,7 +113,7 @@
 	/*Начальная страница игры*/
 		.all_page1Game {
 			width: 100%;
-			height: 800px;
+			height: 850px;
 			margin-left: -5px;
 			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/picture1.jpg);
 			background-size: cover;
@@ -121,7 +121,7 @@
 			border-radius: 30px;
 			user-select: none;
 			visibility: hidden;
-			margin-top: -810px;
+			margin-top: -860px;
 		}
 		.beginner_page1Game {
 			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/ForText.jpg);
@@ -176,7 +176,39 @@
 		.button_hero:hover {
 			background-color: #1ac2ff;
 		}
+		.dop_rule {
+			width: 545px;
+			height: 250px;
+			border: 8px solid #4dcfff;
+			margin: -750px 0px 0px 700px;
+			border-radius: 5px 5px 30px 5px;
+			visibility: hidden;
+			background-color: #00cc00;
+			cursor: pointer;
+			text-align: left;
+			font-size: 30px;
+			font: cursive;
+			font-family: serif;
+		}
+		.alert_button {
+			width: 200px;
+			height: 40px;
+			margin: -10px 0px 0px 0px ;
+			text-align: center;
+			cursor: pointer;
+			outline: none;
+			box-shadow: 3px 4px 10px grey, 0 0 1em #001a00;
+			border-radius: 5px 5px 5px 5px;
+			outline: none;
+			border: none;
+			font-size: 30px;
+			display: inline-block;
+		}
+		.alert_button:hover {
+			background-color: #cccccc;
+		}
 		/*Робот*/
+		/*Герой*/
 		.robot {
 			width: 500px;
 			height: 500px;
@@ -311,11 +343,11 @@
 			font-size: 15px;
 			font-family: Courier, monospace;
 			padding: 10px;
-		}/*Робот*/
-		/*Начальная страница правил*/
-		.all_page1Rules {
+		}
+		/*Герой*/
+		.all_page1Game_extra {
 			width: 100%;
-			height: 800px;
+			height: 850px;
 			margin-left: -5px;
 			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/picture1.jpg);
 			background-size: cover;
@@ -323,7 +355,172 @@
 			border-radius: 30px;
 			user-select: none;
 			visibility: hidden;
-			margin-top: -810px;
+			margin-top: -860px;
+		}
+		.life_evil {
+			width: 500px;
+			height: 40px;
+			margin: 100px auto 0px auto;
+			text-align: center;
+			font: 35px fantasy;
+			border-radius: 20px;
+			box-shadow: 3px 4px 10px red, 0 0 1em orange;
+			background-color: red;
+			color: orange;
+		}
+		/*Злодей*/
+		.evilrobot {
+			width: 500px;
+			height: 500px;
+			user-select: none;
+			background-image: url(\Фотографии/ForTitle.jpg);
+			border-radius: 20px;
+			border: 10px dashed #ff9933;
+			visibility: hidde;
+			margin: 100px auto 0px auto;
+		}
+		.eviltop {
+			width: 500px;
+			height: 100px;
+			padding-top: 60px;
+		}
+		.evilbody {
+			width: 500px;
+			height: 200px;
+			margin-top: -40px;
+		}
+		.evilbottom {
+			width: 500px;
+			height: 200px;
+			padding: 0px 0px 0px 0px;
+		}
+		.evilhead {
+			width: 80px;
+			height: 60px;
+			background-image: url(\Фотографии/EvilHeadOfRobot.jpg);
+			margin: -15px 0px 0px 195px;
+			border-radius: 10px;
+		}
+		.evilhead:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em blue;
+		}
+		.evilarm_l {
+			width: 50px;
+			height: 200px;
+			background-image: url(\Фотографии/EvilLeftArm.jpg);
+			margin-left: 135px;
+			margin-top: 10px;
+			display: inline-block;
+			border-radius: 30px 0px 30px 30px;
+		}
+		.evilarm_l:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em blue;
+		}
+		.evilarm_r {
+			width: 50px;
+			height: 200px;
+			background-image: url(\Фотографии/EvilRightArm.jpg);
+			margin-top: 10px;
+			display: inline-block;
+			border-radius: 0px 30px 30px 30px;
+		}
+		.evilarm_r:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em blue;
+		}
+		.eviltorso {
+			width: 100px;
+			height: 200px;
+			background-image: url(\Фотографии/EvilBody.jpg);
+			margin: 0px -5px 20px -3px;
+			display: inline-block;
+			border-radius: 20px;
+		}
+		.eviltorso:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em blue;
+		}
+		.evilleg {
+			width: 110px;
+			height: 150px;
+			background-image: url(\Фотографии/EvilLeg.jpg);
+			margin-top: -10px;
+			margin-left: 175px;
+			display: inline-block;
+			border-radius: 20px 20px 10px 10px;
+		}
+		.evilleg:hover {
+			box-shadow: 3px 4px 10px black, 0 0 1em blue;
+		}
+
+		.evilinf_head {
+			width: 200px;
+			height: 50px;
+			background-color: #ff9933;
+			border-radius: 20px 20px 0px 20px;
+			visibility: hidden;
+			margin: -55px 0px 0px 0px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 10px;
+		}
+		.evilinf_body {
+			width: 180px;
+			height: 80px;
+			background-color: #ff9933;
+			border-radius: 20px 20px 20px 0px;
+			visibility: hidden;
+			margin: -480px 0px 0px 280px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 5px;
+		}
+		.evilinf_arm_l {
+			width: 130px;
+			height: 80px;
+			background-color: #ff9933;
+			border-radius: 20px 0px 20px 20px;
+			visibility: hidden;
+			margin: 170px 0px 0px 5px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 5px;
+		}
+		.evilinf_arm_r {
+			width: 120px;
+			height: 100px;
+			background-color: #ff9933;
+			border-radius: 0px 20px 20px 20px;
+			visibility: hidden;
+			margin: -200px 0px 0px 335px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 5px;
+		}
+		.evilinf_leg {
+			width: 180px;
+			height: 70px;
+			background-color: #ff9933;
+			border-radius: 0px 20px 20px 20px;
+			visibility: hidden;
+			margin: 90px 0px 0px 290px;
+			font-size: 15px;
+			font-family: Courier, monospace;
+			padding: 10px;
+		}
+		/*Злодей*/
+		/*Робот*/
+
+		/*Начальная страница правил*/
+		.all_page1Rules {
+			width: 100%;
+			height: 850px;
+			margin-left: -5px;
+			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/picture1.jpg);
+			background-size: cover;
+			border: 5px solid #3c5d5d;
+			border-radius: 30px;
+			user-select: none;
+			visibility: hidden;
+			margin-top: -960px;
 		}
 		/*1*/
 		.beginner_page1Rules {
@@ -331,7 +528,7 @@
 			width: 1050px;
 			height: 740px;
 			border-radius: 20px;
-			margin: 20px 0px 0px 100px;
+			margin: 40px 0px 0px 100px;
 			font-size: 25px;
 			font-family: sans-serif;
 			padding: 10px;
@@ -359,15 +556,12 @@
 			width: 1050px;
 			height: 740px;
 			border-radius: 20px;
-			margin: 20px 0px 0px 100px;
+			margin: -60px 0px 0px 100px;
 			font-size: 25px;
 			font-family: sans-serif;
 			padding: 10px;
 			visibility: hidden;
 			margin-top: -740px;
-		}
-		.backtext {
-			
 		}/*2*/
 		/*Начальная страница правил*/
 		/*------------G------A----M-------E--------P----A-----G--E---S---*/
@@ -527,7 +721,7 @@
 					<div>"Они кажутся такими далекими, но это будет недолгий путь."</div>
 					<div>Здесь была дорога-но какая! Роскошная бетонная полоса была шире обычной тропы. 
 					Но вскоре путь был завален разбитыми машинами, перегораживающие метров 20 вперед.</div>
-					<di>"Эх, не проехать! Нужно как-то попасть на ту сторону. Или поехать обратно, другим путем, а может даже я смогу пробраться с боку этого завала".</di>
+					<div>"Эх, не проехать! Нужно как-то попасть на ту сторону. Или поехать обратно, другим путем, а может даже я смогу пробраться с боку этого завала".</div>
 				</i>
 			</div>
 			<div class="game_answers">
@@ -589,7 +783,7 @@
 				<i class="author">
 					<div>Герой попробовал другую дорогу, может ему повезет в этот раз.</div>
 					<div>"Да уж, не очень хорошая идея...Здесь я уже был и мне тут не понравилось."</div>
-					<div>"Надо мне поменьше ходить теми же путями, а то ведь выследят меня или еще чего хуже...встечусь с неприятелем лицом к лицу!"</div>
+					<div>"Надо мне поменьше ходить теми же путями, а то ведь выследят меня или еще чего хуже...встречусь с неприятелем лицом к лицу!"</div>
 				</i>
 			</div>
 			<div class="game_answers">
@@ -607,7 +801,7 @@
 				<i class="author">
 					<div>Герой попробовал другую дорогу, может ему повезет в этот раз.</div>
 					<div>"Да уж, не очень хорошая идея...Здесь я уже был и мне тут не понравилось."</div>
-					<div>"Надо мне поменьше ходить теми же путями, а то ведь выследят меня или еще чего хуже...встечусь с неприятелем лицом к лицу!"</div>
+					<div>"Надо мне поменьше ходить теми же путями, а то ведь выследят меня или еще чего хуже...встречусь с неприятелем лицом к лицу!"</div>
 					<div>"Потрескавшаяся земля выглядит твердой, но переходить ли мне по ней?"- засомневался робот.</div>
 					<div>"Вроде бы это лужа не такая и большая, и мне проще будет объехать?"</div>
 				</i>
@@ -681,10 +875,10 @@
 		<div class="game_page1" id="GamePage10"><!-- Page6Answer2All2 Page17Answer2All2 Page3Answer2All3 -->
 			<div class="game_text">
 				<i class="author">
-					<di>Пока робот объезжал озеро со стороны, он заметил следы.</di>
-					<di>"Кажется кому-то сильно не повело..."-сказал робот, так как отпечатки ног вели в центр высохшего озера и исчезали.</di>
-					<di>"Хорошо, что я не стал полностью перебераться через вязкую землю, а то остался бы там как этот бедолага."</di>
-					<di>После этого герой продолжил свое путешествие.</di>
+					<div>Пока робот объезжал озеро со стороны, он заметил следы.</div>
+					<div>"Кажется кому-то сильно не повело..."-сказал робот, так как отпечатки ног вели в центр высохшего озера и исчезали.</div>
+					<div>"Хорошо, что я не стал полностью перебераться через вязкую землю, а то остался бы там как этот бедолага."</div>
+					<div>После этого герой продолжил свое путешествие.</div>
 				</i>
 			</div>
 			<div class="game_answers">
@@ -696,7 +890,7 @@
 		<div class="game_page1" id="GamePage11"><!-- Page9Answer1All2 Page17Answer1All2 -->
 			<div class="game_text">
 				<i class="author">
-					<div>"О боже, я чуть не утонул! Больше никогда не буду рисковать, я ели выбрался из этой ловушки..."</div>
+					<div>"О боже, я чуть не утонул! Больше никогда не буду рисковать, я еле выбрался из этой ловушки..."</div>
 					<div>Робот стаял на краю берега, оглядывался и пытался забыть это страшное ощущение, когда тебя затягивает под землю.</div>
 					<div>"Если мне не кажется, впереди есть что-то интересное.</div>
 					<div>Но вот досада, мне не зарядиться от солнца, но я наверно могу подождать его появления."</div>
@@ -734,10 +928,10 @@
 			<div class="game_text">
 				<i class="author">
 					<div>Пока робот подъезжал к разрушенным домам, становилось все страшнее.</div>
-					<div>Огромные темные здания пугали своими масштабами, а завывающий ветер, который гулял по улицам этого городка, не заставлял оставаться в напряжении.</div>
-					<div>"Как тут тихо.. Если бы не ветер, я бы подумал что это и вправду конец света"</div>
+					<div>Огромные темные здания пугали своими масштабами, а завывающий ветер, который гулял по улицам этого городка, не позволял расслабиться.</div>
+					<div>"Как тут тихо.. Если бы не ветер, я бы подумал, что это и вправду конец света"</div>
 					<div>Но вдруг роботу послышался грохот, как будто громко хлопнули дверью</div>
-					<div>"Это от туда..."-сказал робот посмотрев на поворот с улицы, по которой он ехал</div>
+					<div>"Это оттуда..."-сказал робот посмотрев на поворот с улицы, по которой он ехал</div>
 				</i>
 			</div>
 			<div class="game_answers">
@@ -752,7 +946,7 @@
 		<div class="game_page1" id="GamePage14"><!-- Page11Answer2All2 Page12Answer2All2 Page16Answer1All1-->
 			<div class="game_text">
 				<i class="author">
-					<div>За озером находилась старая лесопилка. Что-то напоминающее бревна деревьев, лежало в огромном количестве разбросанное по поляне.</div>
+					<div>За озером находилась старая лесопилка. Что-то напоминающее бревна, лежало в огромном количестве разбросанное по поляне.</div>
 					<div>Остатки небольших домиков придавали этой находке устрашающе забытое богом место.</div>
 					<div>"Как же мне тут не по себе..."-тихо сказал робот.</div>
 					<div>Внезапно послышался громкий треск со стороны большего из зданий</div>
@@ -855,17 +1049,17 @@
 			<div class="game_text">
 				<i class="author">
 					<div>"Мне тот робот еще посоветовал проверить одну площадь в этом городе, сказал, что он видел робота, направляющегося туда."</div>
-					<div>Когда робот выехал на дорогу со двора, он заметил табличку со знаками, которых он не заметил.</div>
+					<div>Когда робот выехал на дорогу со двора, он заметил табличку со знаками, которых он сразу не увидел.</div>
 					<div>Первый указатель показывал в центр города, а второй на площадь.</div>
 					<div>Темнело, медленно спускался туман на бескрайние пустоши, шанс подзарядиться был очень мал.</div>
 				</i>
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page20Answer1All2">Ехать к центру</li></i>не работает<!-                                   >
+					<i><li class="answer" id="Page20Answer1All2">Ехать к центру</li></i><!-- переход в JS сделан -->
 				</p>
 				<p>
-					<i><li class="answer" id="Page20Answer2All2">Проверить площадь</li></i>не работает<!-                                   >
+					<i><li class="answer" id="Page20Answer2All2">Проверить площадь ♠</li></i>не работает<!-                                   >
 				</p>
 			</div>
 		</div>
@@ -881,10 +1075,10 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page21Answer1All1">Ехать к большому зданию</li></i>не работает<!-                                   >
+					<i><li class="answer" id="Page21Answer1All1">Ехать к большому зданию</li></i><!-- переход в JS сделан -->
 				</p>
 				<p>
-					<i><li class="answer" id="Page21Answer2All2">Проверить домик в лесу</li></i>не работает<!-                                   >
+					<i><li class="answer" id="Page21Answer2All2">Проверить домик в лесу ♠</li></i>не работает<!-                                   >
 				</p>
 			</div>
 		</div>
@@ -900,7 +1094,7 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page22Answer1All2">Продолжить путь к центру</li></i>не работает<!-                                   >
+					<i><li class="answer" id="Page22Answer1All2">Продолжить путь к центру</li></i><!-- переход в JS сделан -->
 				</p>
 				<p>
 					<i><li class="answer" id="Page22Answer2All2">Вернуться к источнику шума</li></i>не работает<!-                                   >
@@ -919,15 +1113,95 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page23Answer1All2">Продолжить путь к заводу</li></i>не работает<!-                                   >
+					<i><li class="answer" id="Page23Answer1All2">Продолжить путь к заводу</li></i><!-- переход в JS сделан -->
 				</p>
 				<p>
-					<i><li class="answer" id="Page23Answer1All2">Продолжить путь к заводу</li></i>не работает<!-                                   >
+					<i><li class="answer" id="Page23Answer2All2">Вернуться к источнику шума</li></i>не работает<!-                                   >
 				</p>
 			</div>
 		</div>
 		
-		<div class="game_page1" id="GamePage24"><!--  -->
+		<div class="game_page1" id="GamePage24"><!-- Page22Answer1All2 -->
+			<div class="game_text">
+				<i class="author">
+					<div>Ожидая чего-то такого из-за чего бы герою пришлось страдать, он надеялся на лучшее, и к счастью, там было еще два робота!</div>
+					<div>Подъехав немного поближе, стало страшно...</div>
+					<div>"О нет... это охотник за металлоломом, он схватил в заложники моего собрата!"</div>
+					<div>"Нужно что-то делать..."</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page24Answer1All2">Спасти товарища</li></i>не работает<!-                                   >
+				</p>
+				<p>
+					<i><li class="answer" id="Page24Answer2All2">Уехать от туда</li></i>не работает<!-                                   >
+				</p>
+			</div>
+		</div>
+		
+		<div class="game_page1" id="GamePage25"><!-- Page23Answer1All2 -->
+			<div class="game_text">
+				<i class="author">
+					<div>Ожидая чего-то такого из-за чего бы герою пришлось страдать, он надеялся на лучшее, и к счастью, там было еще два робота!</div>
+					<div>Подъехав немного поближе, стало страшно...</div>
+					<div>"О нет... это охотник за металлоломом, он схватил в заложники моего собрата!"</div>
+					<div>"Нужно что-то делать..."</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page25Answer1All2">Спасти товарища</li></i>не работает<!-                                   >
+				</p>
+				<p>
+					<i><li class="answer" id="Page25Answer2All2">Уехать от туда</li></i>не работает<!-                                   >
+				</p>
+			</div>
+		</div>
+		
+		<div class="game_page1" id="GamePage26"><!-- Page22Answer2All2 -->
+			<div class="game_text">
+				<i class="author">
+					<div>Оказалось, что шум устроил другой робот, перелезая через забор, он упал на бак с мусором, а выбраться не смог.</div>
+					<div>"Эй! Помоги мне, я попал в ловушку. Я тут, в баке!"</div>
+					<div>"Давай руку!"-уверенно сказал герой и протянул новому другу механическую клешню.</div>
+					<div>"Спасибо"-сказал тот.</div>
+					<div>После долгого разговора, они отправились своими дорогами.</div>
+					<div>"Как хорошо, что я нашел его, а то попал бы он в беду, зато я узнал, что тут недалеко, есть база...может мне ее проверить?"</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page26Answer1All2">Продолжить путь к центру</li></i>не работает<!-                                   >
+				</p>
+				<p>
+					<i><li class="answer" id="Page20Answer2All2">Проверить площадь ♠</li></i>не работает<!-                                   >
+				</p>
+			</div>
+		</div>
+		
+		<div class="game_page1" id="GamePage27"><!-- Page23Answer2All2 -->
+			<div class="game_text">
+				<i class="author">
+					<div>Оказалось, что шум устроил другой робот, переходя по бревну, он упал и его завалило.</div>
+					<div>"Эй! Помоги мне, я попал в ловушку. Я тут, под бревном!"</div>
+					<div>"Давай руку!"-уверенно сказал герой и протянул новому другу механическую клешню.</div>
+					<div>"Спасибо"-сказал тот.</div>
+					<div>После долгого разговора, они отправились своими дорогами.</div>
+					<div>"Как хорошо, что я нашел его, а то попал бы он в беду, зато я узнал, что тут недалеко, есть база...может мне ее проверить?"</div>
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page27Answer1All2">Продолжить путь к заводу</li></i>не работает<!-                                   >
+				</p>
+				<p>
+					<i><li class="answer" id="Page21Answer2All2">Проверить домик в лесу ♠</li></i>не работает<!-                                   >
+				</p>
+			</div>
+		</div>
+		
+		<div class="game_page1" id="GamePage28"><!--  -->
 			<div class="game_text">
 				<i class="author">
 					
@@ -935,7 +1209,7 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page20Answer1All1"></li></i>
+					<i><li class="answer" id="Page28Answer1All2"></li></i>
 				</p>
 			</div>
 		</div>
@@ -948,11 +1222,25 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page20Answer1All1"></li></i>
+					<i><li class="answer" id="Page29Answer1All2"></li></i>
 				</p>
 			</div>
 		</div>
 		
+		<div class="game_page1" id="GamePage"><!--  -->
+			<div class="game_text">
+				<i class="author">
+					
+				</i>
+			</div>
+			<div class="game_answers">
+				<p>
+					<i><li class="answer" id="Page30Answer1All2"></li></i>
+				</p>
+			</div>
+		</div>
+		
+
 	</div>
 	<!--СТРАНИЦЫ ИГРЫ-->
 
@@ -1008,9 +1296,56 @@
 			</div>
 		</div>
 		<!--СКРИПТ РОБОТА-->
-	<script rc="JS/DivBot.js"></script>
+	<script src=""></script>
 		<!--СКРИПТ РОБОТА-->
 	<!--Робот-->
+	<div class="dop_rule" id="DopRule">
+		Если вы заметите значок " ♠ " на некоторых предложенных вариантах ответов, то это значит, что этот вариант был вам недоступен, но вы сделали какой-то важный выбор, и вам открылся новый путь или действие.
+		<button class="alert_button" id="CloseAlert"><i>Закрыть</i></button>
+	</div>
+</div>
+
+
+
+<div class="all_page1Game_extra" id="PageGame2">
+	<div class="life_evil"></div>
+	<!--ЗЛОЙ Робот-->
+	<div class="evilrobot">
+		<div class="eviltop">
+			<div class="evilinf_head" id="EvilInfHead">
+			<b>Ударив в голову, вы нанесете -20 урона. Но потеряете -10 энергии</b>
+			</div>
+			<div class="evilhead" id="EvilHead"></div>
+		</div>
+		<div class="evilbody">
+			<div class="evilarm_l" id="EvilArmLeft"></div>
+			<div class="eviltorso" id="EvilBody"></div>
+			<div class="evilarm_r" id="EvilArmRight"></div>
+		</div>
+		<div class="evilbottom">
+			<div class="evilleg" id="EvilLeg"></div>
+		</div>
+
+		<div class="evilinf_body" id="EvilInfBody">
+			<b>Ударив в тело, вы нанесете -10 урона. Но потеряете -5 энергии</b>
+		</div>
+		<div class="evilinf_arm_l" id="EvilInfArmLeft">
+			<b>Ударив в руку, вы нанесете -6 урона. Но потеряете -3 энергии</b>
+		</div>
+		<div class="evilinf_arm_r" id="EvilInfArmRight">
+			<b>Ударив в руку, вы нанесете -6 урона. Но потеряете -3 энергии</b>
+		</div>
+		<div class="evilinf_leg" id="EvilInfLeg">
+			<b>Ударив в ноги, вы нанесете -4 урона. Но потеряете -2 энергии</b>
+		</div>
+	</div>
+	<!--СКРИПТ ЗЛОГО РОБОТА-->
+	<script src=""></script>
+	<!--СКРИПТ ЗЛОГО РОБОТА-->
+	<!--ЗЛОЙ Робот-->
+</div>
+<div class="all_page1Game_map" id="PageGame3">
+	<!--Если успею, тут будет карта-->
 </div>
 <!--ИГРА-->
 	
@@ -1052,22 +1387,20 @@
 		<div class="beginner_page2Rules" id="Pag2Rules">
 			<i>Способности роботу</i>, при желании, <span>можно не выбирать</span>, если хочется испытать все сложности игры.ッ
 			<li>Ловкость дает вашему герою бонусом ✚50, а значит вы становитесь более живучими с 150-ми единицами.</li>
-			<li>Сила ускоряет процесс зарядки в ☀10, то есть в состоянии зарядки от солнца, энергии дается больше.</li>
+			<li>Сила ускоряет процесс зарядки в ☀10, а значит, находясь в состоянии зарядки от солнца, энергии дается больше.</li>
 			<li>Способность ☯Быстрый☯ позволяет роботу уходить от преследования гораздо быстее. А значит меньше риск встречи с неприятелями.</li>
 			<p>
 				<div><i>На счет энергии...</i></div>
-				<div>В течении игры у вас будет меняться ее количество. За каждый сделанный ответ она будет прибавляться, при условии:</div>
+				<div>В течении игры у вас будет меняться ее количество. За каждый выбранный ответ она будет прибавляться, при условии:</div>
 				<li>Что вы, в момент выбора ответа, стояли под солнцем</li>
 				<li>Приобрели батарею/С вами поделились зарядом</li>
 				<li>У вас не была повреждена солнечная панель</li>
 				<span>У героя не отнимается энергия, если он стоит на месте</span>
 			</p>
-			<p class="backtext"><div><i>Советы по игре:</i></div>
-				<div>Отвечая на вопросы, вы не будете знать последствия выбранных ответов, но можно и предугадать, что случится после. Например:</div>
-				<li>Вам выпал шанс подзарядиться! Все бы было хорошо, но чем больше стоишь на месте, тем выше степень обнаружения.
-				</li> Или еще один хороший пример:
-				<li>Вы заметили выжившего робота в плену у охотников за металом, хотите его спасти, тем самым завязав драку, получив вмятины или царапины. 
-				Лучше не рисковать состоянием за одного робота, а найти таких же выживших без риска.</li>
+			<p class="backtext"><div><i>Драка с врагами</i></div>
+				<div>В процессе прохождения миссии, вы столкнетесь с противниками и злодеями.</div>
+				<div>Некоторых схваток с врагами можно избежать, но есть сюжет, и по нему вам точно придется драться, чтобы пройти дальше.</div>
+				<div>Все сражения будут выглядеть как и прохождение квеста, но вместо того, чтобы нажать на ответ и отправиться куда-то, вы будете выбирать часть другого робота, чтобы ударить. На удар тратится энергия, незначительное количество, но все же аккуратнее с выбором.</div>
 			</p>
 
 			<button class="button_change_page" id="BackRules1"><i>◀Назад</i></button>
@@ -1133,6 +1466,72 @@
 			} else {
 				InfLeg.style.visibility = 'hidden'
 				Leg = 1
+			};
+		});
+
+
+
+
+		let EvilHead = document.getElementById('EvilHead');
+		let EvilBody = document.getElementById('EvilBody');
+		let EvilArmLeft = document.getElementById('EvilArmLeft');
+		let EvilArmRight = document.getElementById('EvilArmRight');
+		let EvilLeg = document.getElementById('EvilLeg');
+
+
+
+		let EvilInfHead = document.getElementById('EvilInfHead');
+		let EvilInfBody = document.getElementById('EvilInfBody');
+		let EvilInfArmLeft = document.getElementById('EvilInfArmLeft');
+		let EvilInfArmRight = document.getElementById('EvilInfArmRight');
+		let EvilInfLeg = document.getElementById('EvilInfLeg');
+
+		//onmouseout покидает
+		//onmouseover наводится
+
+		EvilHead.addEventListener('mouseover', function() {
+			if (EvilHead != 0) {
+				EvilInfHead.style.visibility = 'visible'
+				EvilHead = 0
+			} else {
+				EvilInfHead.style.visibility = 'hidden'
+				EvilHead = 1
+			};
+		});
+		EvilBody.addEventListener('mouseover', function() {
+			if (EvilBody != 0) {
+				EvilInfBody.style.visibility = 'visible'
+				EvilBody = 0
+			} else {
+				EvilInfBody.style.visibility = 'hidden'
+				EvilBody = 1
+			};
+		});
+		EvilArmLeft.addEventListener('mouseover', function() {
+			if (EvilArmLeft != 0) {
+				EvilInfArmLeft.style.visibility = 'visible'
+				EvilArmLeft = 0
+			} else {
+				EvilInfArmLeft.style.visibility = 'hidden'
+				EvilArmLeft = 1
+			};
+		});
+		EvilArmRight.addEventListener('mouseover', function() {
+			if (EvilArmRight != 0) {
+				EvilInfArmRight.style.visibility = 'visible'
+				EvilArmRight = 0
+			} else {
+				EvilInfArmRight.style.visibility = 'hidden'
+				EvilArmRight = 1
+			};
+		});
+		EvilLeg.addEventListener('mouseover', function() {
+			if (EvilLeg != 0) {
+				EvilInfLeg.style.visibility = 'visible'
+				EvilLeg = 0
+			} else {
+				EvilInfLeg.style.visibility = 'hidden'
+				EvilLeg = 1
 			};
 		});
 //-----------R----O------B-----O------T-------------------
@@ -1267,10 +1666,10 @@
 				if (SaveRobot == '') {
 					SaveRobot = 'BOT-1'
 				};
-				GamePage0.style.visibility = 'hidden';
-				GamePage1.style.visibility = 'visible';
-				Indi.style.visibility = 'visible';
-				Robot.style.visibility = 'visible';
+				GamePage0.style.visibility = 'hidden';//скроется пред игровая страница
+				GamePage1.style.visibility = 'visible';//появится игра
+				Robot.style.visibility = 'visible';//появится иконка робота
+				DopRule.style.visibility = 'visible';//самодельный alert-подсказка
 
 				//Name1.innerHTML = SaveRobot;
 				//Name2.innerHTML = SaveRobot;
@@ -1288,6 +1687,16 @@
 		
 
 		//Страница игры
+		let DopRule = document.getElementById('DopRule');//самодельный alert-подсказка
+		let PageGame2 = document.getElementById('PageGame2');//Противник
+		let PageGame3 = document.getElementById('PageGame3');//Карта
+		
+		CloseAlert.addEventListener('click', function() {
+			Indi.style.visibility = 'visible';//появятся индикаторы
+			DopRule.style.visibility = 'hidden';//самодельный alert-подсказка
+		});
+
+
 		let GamePage2 = document.getElementById('GamePage2'); //Игровая страница 2
 		let GamePage3 = document.getElementById('GamePage3'); //Игровая страница 3
 		let GamePage4 = document.getElementById('GamePage4'); //Игровая страница 4
@@ -1810,6 +2219,42 @@
 			//Переключение страниц
 			GamePage21.style.visibility = 'visible';
 			GamePage19.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
+		Page20Answer1All2.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage22.style.visibility = 'visible';
+			GamePage20.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
+		Page21Answer1All1.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage23.style.visibility = 'visible';
+			GamePage21.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
+		Page22Answer1All2.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage24.style.visibility = 'visible';
+			GamePage22.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
+		Page23Answer1All2.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage25.style.visibility = 'visible';
+			GamePage23.style.visibility = 'hidden';
 			//Переключение завершено
 
 			UpdateIndi();//Обновление
