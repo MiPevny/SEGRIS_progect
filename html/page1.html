@@ -520,7 +520,7 @@
 			border-radius: 30px;
 			user-select: none;
 			visibility: hidden;
-			margin-top: -960px;
+			margin-top: -850px;
 		}
 		/*1*/
 		.beginner_page1Rules {
@@ -556,12 +556,11 @@
 			width: 1050px;
 			height: 740px;
 			border-radius: 20px;
-			margin: -60px 0px 0px 100px;
+			margin: -760px 0px 0px 100px;
 			font-size: 25px;
 			font-family: sans-serif;
 			padding: 10px;
 			visibility: hidden;
-			margin-top: -740px;
 		}/*2*/
 		/*Начальная страница правил*/
 		/*------------G------A----M-------E--------P----A-----G--E---S---*/
@@ -570,7 +569,7 @@
 			width: 507px;
 			height: 230px;
 			border: 2px solid black;
-			margin: -800px 0px 0px 720px;
+			margin: -820px 0px 0px 720px;
 			border-radius: 30px 30px 0px 0px;
 			visibility: hidden;
 			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/ForText.jpg);
@@ -644,6 +643,41 @@
 			margin: -400px 0px 0px 950px;
 			padding: 10px
 			border-radius: 15px;
+		}
+
+
+
+		.all_page1Game_map {
+			width: 100%;
+			height: 845px;
+			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/ForText.jpg);
+			background-size: cover;
+			border-radius: 30px;
+			border: 5px solid #3c5d5d;
+			user-select: none;
+			visibility: hidden;
+			margin-top: -68.5%
+		}
+		.map_button {
+			width: 200px;
+			height: 200px;
+			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/Map.png);
+			text-align: center;
+			cursor: pointer;
+			position: relative;
+			outline: none;
+			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+			font-size: 30px;
+			border-radius: 20px;
+			color: white;
+			text-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+		}
+		.map {
+			width: 1150px;
+			height: 820px;
+			background-image: url(https://github.com/MiPevny/SEGRYS_progect/raw/master/pictures/AllMap.jpg);
+			border-radius: 30px;
+			margin: 10px 0px 0px 50px;
 		}
 		/*------------G------A----M-------E--------P----A-----G--E---S---*/
 	</style>
@@ -1305,7 +1339,7 @@
 			</div>
 		</div>
 		
-		<div class="game_page1" id="GamePage34"><!--  -->
+		<div class="game_page1" id="GamePage34"><!-- Page24Answer2All2 -->
 			<div class="game_text">
 				<i class="author">
 					
@@ -1318,7 +1352,7 @@
 			</div>
 		</div>
 		
-		<div class="game_page1" id="GamePage35"><!--  -->
+		<div class="game_page1" id="GamePage35"><!-- Page25Answer2All2 -->
 			<div class="game_text">
 				<i class="author">
 					
@@ -1411,12 +1445,18 @@
 
 	<!--ИНДИКАТОРЫ-->
 		<div class="indicators" id="Indi">
-			<div class="name" id="Name5"></div>
+			<div style="width: 100px;">
+				<div class="name" id="Name5"></div>
+	
+				<div class="indi" id="Life"></div><!--✚100-->
+				<div class="indi" id="Energy"></div><!--☀ 100-->
+				<div class="indi" id="Found"></div><!--✪0-->
+				<div class="indi" id="Danger"></div><!--☯0-->
+			</div>
+			<div style="width: 200px;margin: -200px 0px 0px 170px;">
+				<button class="map_button" id="MapOpen"><i>Карта</i></button>
+			</div>
 
-			<div class="indi" id="Life"></div><!--✚100-->
-			<div class="indi" id="Energy"></div><!--☀ 100-->
-			<div class="indi" id="Found"></div><!--✪0-->
-			<div class="indi" id="Danger"></div><!--☯0-->
 		</div>
 	<!--ИНДИКАТОРЫ-->
 
@@ -1508,9 +1548,6 @@
 	<!--СКРИПТ ЗЛОГО РОБОТА-->
 	<!--ЗЛОЙ Робот-->
 </div>
-<div class="all_page1Game_map" id="PageGame3">
-	<!--Если успею, тут будет карта-->
-</div>
 <!--ИГРА-->
 	
 
@@ -1570,8 +1607,14 @@
 			<button class="button_change_page" id="BackRules1"><i>◀Назад</i></button>
 		</div>
 	</div>
+</div>
 	<!--ПРАВИЛА-->
 
+	<!--КАРТА-->
+	<div class="all_page1Game_map" id="PageGame3">
+	<div class="map"></div>
+	<button class="clase_map"></button>
+	<!--КАРТА-->
 
 
 	<!--СКРИПТ-->
@@ -1877,6 +1920,12 @@
 		let LifeEvil = document.getElementById('LifeEvil'); //Жизнь робота-охотника
 		let LifeEvilValue = 100;//Жизнь робота-охотника
 		let PageGame3 = document.getElementById('PageGame3');//Карта
+		let MapOpen = document.getElementById('MapOpen');//Карта
+
+		MapOpen.addEventListener('click', function() {
+			PageGame3.style.visibility = 'visible';//Появится карта
+			PageGame1.style.marginLeft = '-200%';//игра скроется
+		});
 		
 		CloseAlert.addEventListener('click', function() {
 			Indi.style.visibility = 'visible';//появятся индикаторы
@@ -1888,10 +1937,15 @@
 		Energy1.innerHTML = '☀' + EnergyValue;
 
 		EvilHead.addEventListener('click', function() {
+			BattleRules();
 			if (LifeEvilValue > 0) {
-				LifeEvilValue = LifeEvilValue - 20
+				LifeEvilValue - 20;
 				LifeEvil.innerHTML = LifeEvilValue;
-				EnergyValue = EnergyValue - 10;
+				if (EnergyValue >= 10) {
+					EnergyValue = EnergyValue - 10;
+				} else {
+					EnergyValue = 0
+				};
 			};
 			Life1.innerHTML = '✚' + LifeValue;
 			Energy1.innerHTML = '☀' + EnergyValue;
@@ -1899,10 +1953,15 @@
 			console.log(EnergyValue);
 		});
 		EvilBody.addEventListener('click', function() {
+			BattleRules();
 			if (LifeEvilValue > 0) {
-				LifeEvilValue = LifeEvilValue - 10;
+				LifeEvilValue - 10;
 				LifeEvil.innerHTML = LifeEvilValue;
-				EnergyValue = EnergyValue - 5;
+				if (EnergyValue >= 5) {
+					EnergyValue = EnergyValue - 5;
+				} else {
+					EnergyValue = 0
+				};
 			};
 			Life1.innerHTML = '✚' + LifeValue;
 			Energy1.innerHTML = '☀' + EnergyValue;
@@ -1910,10 +1969,15 @@
 			console.log(EnergyValue);
 		});
 		EvilArmLeft.addEventListener('click', function() {
+			BattleRules();
 			if (LifeEvilValue > 0) {
-				LifeEvilValue = LifeEvilValue - 6;
+				LifeEvilValue - 6;
 				LifeEvil.innerHTML = LifeEvilValue;
-				EnergyValue = EnergyValue - 3;
+				if (EnergyValue >= 3) {
+					EnergyValue = EnergyValue - 3;
+				} else {
+					EnergyValue = 0
+				};
 			};
 			Life1.innerHTML = '✚' + LifeValue;
 			Energy1.innerHTML = '☀' + EnergyValue;
@@ -1921,10 +1985,15 @@
 			console.log(EnergyValue);
 		});
 		EvilArmRight.addEventListener('click', function() {
+			BattleRules();
 			if (LifeEvilValue > 0) {
-				LifeEvilValue = LifeEvilValue - 6;
+				LifeEvilValue - 6;
 				LifeEvil.innerHTML = LifeEvilValue;
-				EnergyValue = EnergyValue - 3;
+				if (EnergyValue >= 3) {
+					EnergyValue = EnergyValue - 3;
+				} else {
+					EnergyValue = 0
+				};
 			};
 			Life1.innerHTML = '✚' + LifeValue;
 			Energy1.innerHTML = '☀' + EnergyValue;
@@ -1932,10 +2001,15 @@
 			console.log(EnergyValue);
 		});
 		EvilLeg.addEventListener('click', function() {
+			BattleRules();
 			if (LifeEvilValue > 0) {
-				LifeEvilValue = LifeEvilValue - 4;
+				LifeEvilValue - 4;
 				LifeEvil.innerHTML = LifeEvilValue;
-				EnergyValue = EnergyValue - 2;
+				if (EnergyValue >= 2) {
+					EnergyValue = EnergyValue - 2;
+				} else {
+					EnergyValue = 0
+				};
 			};
 			Life1.innerHTML = '✚' + LifeValue;
 			Energy1.innerHTML = '☀' + EnergyValue;
@@ -2068,180 +2142,185 @@
 			if (DangerValue < 10) {
 				if (DangerValue == 3) {
 					LifeEvil.innerHTML = 10;
-					LifeValue = LifeValue - PushEasy(1, 7);
+					//LifeValue = PushEasy(1, 7);
 				};
 				if (DangerValue == 4) {
 					LifeEvil.innerHTML = 20;
-					LifeValue = LifeValue - PushEasy(1, 7);
+					//LifeValue = PushEasy(1, 7);
 				};
 				if (DangerValue == 5) {
 					LifeEvil.innerHTML = 30;
-					LifeValue = LifeValue - Push(1, 5);
+					//LifeValue = Push(1, 5);
 				};
 				if (DangerValue == 6) {
 					LifeEvil.innerHTML = 40;
-					LifeValue = LifeValue - Push(1, 5);
+					//LifeValue = Push(1, 5);
 				};
 				if (DangerValue == 7) {
 					LifeEvil.innerHTML = 50;
-					LifeValue = LifeValue - PushShoot(1, 9);
+					//LifeValue = PushShoot(1, 9);
 				};
 				if (DangerValue == 8) {
 					LifeEvil.innerHTML = 50;
-					LifeValue = LifeValue - PushShoot(1, 9);
+					//LifeValue = PushShoot(1, 9);
 				};
 				if (DangerValue == 9) {
 					LifeEvil.innerHTML = 50;
-					LifeValue = LifeValue - PushShootHard(1, 7);
+					//LifeValue = PushShootHard(1, 7);
 				};
 			} else {
 				//GameOver - тип будущая функция, которая заканчивает всю эту игру...
 			};
 			function PushEasy (min, max) {
 				let a = min + Math.random() * (max - min);
-				if (SaveClass == '✚Ловким✚') {
-					let BotLife = 150;
-				} else {
-					let BotLife = 100;
-				};
 				a = Math.round(a);
 				
-				switch(a) {
+			/*	switch(a) {
 					case 1:
-					BotLife-20;//
+					LifeValue - 20;//Удар в голову
 					break;
+					return
 					case 2:
-					BotLife-15;//
+					LifeValue - 15;//Удар в тело
 					break;
+					return
 					case 3:
-					BotLife-10;//
+					LifeValue - 10;//Удар в ходовую часть
 					break;
+					return
 					case 4:
-					BotLife-5;//
+					LifeValue - 5;//Удар в руку
 					break;
+					return
 					case 5:
-					BotLife-5;//
+					LifeValue - 5;//Удар в руку
 					break;
+					return
 					case 6:
-					BotLife-0;//
+					LifeValue - 0;//Промах
 					break;
+					return
 					case 7:
-					BotLife-0;//
+					LifeValue - 0;//Промах
 					break;
+					return
 				};
-
+				return
+				*/
 			};
 			function Push (min, max) {
 				let a = min + Math.random() * (max - min);
-				if (SaveClass == '✚Ловким✚') {
-					let BotLife = 150;
-				} else {
-					let BotLife = 100;
-				};
 				a = Math.round(a);
 				
-				switch(a) {
+			/*	switch(a) {
 					case 1:
-					BotLife-20;//
+					LifeValue - 20;//Удар в голову
 					break;
+					return
 					case 2:
-					BotLife-15;//
+					LifeValue - 15;//Удар в тело
 					break;
+					return
 					case 3:
-					BotLife-10;//
+					LifeValue - 10;//Удар в ходовую чать
 					break;
+					return
 					case 4:
-					BotLife-5;//
+					LifeValue - 5;//Удар в руку
 					break;
+					return
 					case 5:
-					BotLife-5;//
+					LifeValue - 5;//Удар в руку
 					break;
+					return
 				};
+				return
+				*/
 
 			};
 			function PushShoot (min, max) {
 				let a = min + Math.random() * (max - min);
-				if (SaveClass == '✚Ловким✚') {
-					let BotLife = 150;
-				} else {
-					let BotLife = 100;
-				};
 				a = Math.round(a);
 				
-				switch(a) {
+			/*	switch(a) {
 					case 1:
-					BotLife-25;//
+					LifeValue - 25;//Выстрел в голову
 					break;
+					return
 					case 2:
-					BotLife-20;//
+					LifeValue - 20;//Удар в голову
 					break;
+					return
 					case 3:
-					BotLife-20;//
+					LifeValue - 20;//Выстрел в тело
 					break;
+					return
 					case 4:
-					BotLife-15;//
+					LifeValue - 15;//Удар в тело
 					break;
+					return
 					case 5:
-					BotLife-15;//
+					LifeValue - 15;//Выстрел в ходовую часть
 					break;
+					return
 					case 6:
-					BotLife-10;//
+					LifeValue - 10;//Удар в ходовую часть
 					break;
+					return
 					case 7:
-					BotLife-5;//
+					LifeValue - 5;//Удар в руку
 					break;
+					return
 					case 8:
-					BotLife-5;//
+					LifeValue - 5;//Удар в руку
 					break;
+					return
 					case 9:
-					BotLife-0;//
+					LifeValue - 0;//Промах
 					break;
+					return
 				};
-
+				return
+				*/
 			};
 			function PushShootHard (min, max) {
 				let a = min + Math.random() * (max - min);
-				if (SaveClass == '✚Ловким✚') {
-					let BotLife = 150;
-				} else {
-					let BotLife = 100;
-				};
 				a = Math.round(a);
 				
-				switch(a) {
+			/*	switch(a) {
 					case 1:
-					BotLife-25;//
+					LifeValue - 25;//Выстрел в голову
 					break;
+					return
 					case 2:
-					BotLife-20;//
+					LifeValue - 20;//Удар в голову
 					break;
+					return
 					case 3:
-					BotLife-25;//
+					LifeValue - 25;//Выстрел в голову
 					break;
+					return
 					case 4:
-					BotLife-20;//
+					LifeValue - 20;//Удар в голову
 					break;
+					return
 					case 5:
-					BotLife-25;//
+					LifeValue - 25;//Выстрел в голову
 					break;
+					return
 					case 6:
-					BotLife-20;//
+					LifeValue - 20;//Удар в голову
 					break;
+					return
 					case 7:
-					BotLife-25;//
+					LifeValue - 25;//Выстрел в голову
 					break;
+					return
 				};
-
+				return
+				*/
 			};
 		};
-		//При повреждении ноги(удар) - 10
-		//При повреждении руки-клешня(удар) - 5          
-		//При повреждении руки-бур(удар) - 5
-		//При повреждении тела(удар) - 15
-		//При повреждении головы(удар) - 20
-		//При повреждении ноги(выстрел) - 15
-		//При повреждении тела(выстрел) - 20
-		//При повреждении головы(выстрел) - 25
 	//Система автоматического определения урона, наносимого врагом роботу
 
 	//Обновление индикаторов
@@ -2262,7 +2341,7 @@
 						UpdateIndi();//Обновление
 						//Зарядка со способностью ☀Сильным☀
 					} else {
-						EnergyValue = EnergyValue = 100;
+						EnergyValue = 100;
 						UpdateIndi();//Обновление
 						//Зарядка со способностью ☀Сильным☀
 					};
@@ -2334,7 +2413,7 @@
 			GamePage2.style.visibility = 'hidden';
 			//Переключение завершено
 
-			EnergyValue = EnergyValue - 20;//Робот потерял заряд
+			EnergyValue - 20;//Робот потерял заряд
 			UpdateIndi();//Обновление
 		});
 
@@ -2345,7 +2424,7 @@
 			//Переключение завершено
 
 			LifeValue = LifeValue - 2;//Робот повредился
-			EnergyValue = EnergyValue - 10;//Робот потерял заряд
+			EnergyValue - 10;//Робот потерял заряд
 			UpdateIndi();//Обновление
 		});
 
@@ -2417,7 +2496,7 @@
 			GamePage5.style.visibility = 'hidden';
 			//Переключение завершено
 
-			EnergyValue = EnergyValue - 20;//Робот потерял заряд
+			EnergyValue - 20;//Робот потерял заряд
 			UpdateIndi();//Обновление
 		});
 
@@ -2428,7 +2507,7 @@
 			//Переключение завершено
 			
 			LifeValue = LifeValue - 2;//Робот повредился
-			EnergyValue = EnergyValue - 10;//Робот потерял заряд
+			EnergyValue - 10;//Робот потерял заряд
 			UpdateIndi();//Обновление
 		});
 
@@ -2502,7 +2581,7 @@
 			GamePage9.style.visibility = 'hidden';
 			//Переключение завершено
 
-			EnergyValue = EnergyValue - 10;//Робот потерял заряд
+			EnergyValue - 10;//Робот потерял заряд
 			UpdateIndi();//Обновление
 		});
 
@@ -2512,7 +2591,7 @@
 			GamePage9.style.visibility = 'hidden';
 			//Переключение завершено
 
-			EnergyValue = EnergyValue - 5;//Робот потерял заряд
+			EnergyValue - 5;//Робот потерял заряд
 			UpdateIndi();//Обновление
 		});
 
@@ -2633,7 +2712,7 @@
 			GamePage17.style.visibility = 'hidden';
 			//Переключение завершено
 
-			EnergyValue = EnergyValue - 10;//Робот потерял заряд
+			EnergyValue - 10;//Робот потерял заряд
 			UpdateIndi();//Обновление
 		});
 
