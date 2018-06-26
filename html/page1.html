@@ -6,7 +6,7 @@
 	<style>
 	/*Начальная страница сайта "Меню"*/
 		.inf {
-			margin-top: 225px;
+			margin-top: 640px;
 			font-family: sans-serif;
 			font-size: 10px;
 		}
@@ -48,12 +48,12 @@
 			width: 200px;
 			height: 200px;
 			border-radius: 50%;
-			margin: 10px auto 50px;
+			margin: 200px auto 50px;
 			background-color: #EEEEEE;
 			background:  linear-gradient(to bottom, #f85032 0%,#f16f5c 50%,#f16f5c 50%,#e73827 100%);
 			text-align: center;
 			cursor: pointer;
-			position: relative;
+			position: absolute;
 			outline: none;
 			font-size: 40px;
 			color: #4dcfff;
@@ -75,6 +75,8 @@
 			cursor: pointer;
 			text-align: center;
 			padding: 20px 20px;
+			position: absolute;
+			margin-top: 280px;
 			background-color: #00cc00;
 			color: white;
 			box-shadow: 3px 4px 10px black, 0 0 1em black;
@@ -95,7 +97,9 @@
 			cursor: pointer;
 			text-align: center;
 			padding: 20px 20px;
-			margin-left: 70px;
+			position: absolute;
+			margin-left: 180px;
+			margin-top: 280px;
 			background-color: #00cc00;
 			color: white;
 			box-shadow: 3px 4px 10px black, 0 0 1em black;
@@ -679,6 +683,21 @@
 			border-radius: 30px;
 			margin: 10px 0px 0px 50px;
 		}
+		.close_map {
+			width: 150px;
+			height: 50px;
+			text-align: center;
+			cursor: pointer;
+			position: relative;
+			outline: none;
+			box-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+			font-size: 30px;
+			border-radius: 20px;
+			color: white;
+			text-shadow: 3px 4px 10px black, 0 0 1em #001a00;
+			margin: -700px 0px 0px 500px;
+		}
+		}
 		/*------------G------A----M-------E--------P----A-----G--E---S---*/
 	</style>
 </head>
@@ -1177,7 +1196,7 @@
 					<i><li class="answer" id="Page24Answer1All2">Спасти товарища</li></i><!-- переход в JS сделан -->
 				</p>
 				<p>
-					<i><li class="answer" id="Page24Answer2All2">Уехать от туда</li></i>не работает<!-                                   >
+					<i><li class="answer" id="Page24Answer2All2">Уехать от туда</li></i><!-- переход в JS сделан -->
 				</p>
 			</div>
 		</div>
@@ -1193,10 +1212,10 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page25Answer1All2">Спасти товарища</li></i>не работает<!-- переход в JS сделан -->
+					<i><li class="answer" id="Page25Answer1All2">Спасти товарища</li></i><!-- переход в JS сделан -->
 				</p>
 				<p>
-					<i><li class="answer" id="Page25Answer2All2">Уехать от туда</li></i>не работает<!-                                   >
+					<i><li class="answer" id="Page25Answer2All2">Уехать от туда</li></i><!-- переход в JS сделан -->
 				</p>
 			</div>
 		</div>
@@ -1217,7 +1236,7 @@
 					<i><li class="answer" id="Page26Answer1All2">Продолжить путь к центру</li></i><!-- переход в JS сделан -->
 				</p>
 				<p>
-					<i><li class="answer" id="Page26Answer2All2">Проверить площадь ♠</li></i>не работает<!-- переход в JS сделан -->
+					<i><li class="answer" id="Page26Answer2All2">Проверить площадь ♠</li></i><!-- переход в JS сделан -->
 				</p>
 			</div>
 		</div>
@@ -1254,7 +1273,7 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page28Answer1All1">Спасти пленника</li></i>не работает<!-- переход в JS сделан -->
+					<i><li class="answer" id="Page28Answer1All1">Спасти пленника</li></i><!-- переход в JS сделан -->
 				</p>
 			</div>
 		</div>
@@ -1270,7 +1289,7 @@
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page29Answer1All1">Спасти пленника</li></i>не работает<!-- переход в JS сделан -->
+					<i><li class="answer" id="Page29Answer1All1">Спасти пленника</li></i><!-- переход в JS сделан -->
 				</p>
 			</div>
 		</div>
@@ -1306,17 +1325,17 @@
 		<div class="game_page1" id="GamePage32"><!-- Page28Answer1All1 -->
 			<div class="game_text">
 				<i class="author">
-					Взломать дверь оказалось не трудно, даже энергии совсем чуть-чуть потратилось.
-					А спасенный робот согласился проводить по тихому обратно до перекрестка, от куда уже можно было поехать в главный центр.
-					Причем этот робот подтвердил, что тут и вправду недалеко есть база, но одному туда лучше не ходить, особенно с почти севшим аккумулятором...
-					"Спасибо, что проводил, скорее всего, даже если бы за нами следили, то потеряли на время точно."-подумал наш герой.
-					"Услуга, за услугу. А так, пожалуйста, рад помочь."-ответил BOT-41.
+					<div>Взломать дверь оказалось не трудно, даже энергии совсем чуть-чуть потратилось.</div>
+					<div>А спасенный робот согласился проводить по тихому обратно до перекрестка, от куда уже можно было поехать в главный центр.</div>
+					<div>Причем этот робот подтвердил, что тут и вправду недалеко есть база, но одному туда лучше не ходить, особенно с почти севшим аккумулятором...</div>
+					<div>"Спасибо, что проводил, скорее всего, даже если бы за нами следили, то потеряли на время точно."-подумал наш герой.</div>
+					<div>"Услуга, за услугу. А так, пожалуйста, рад помочь."-ответил BOT-41.</div>
 
 				</i>
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page32Answer1All2">Поехать центр города</li></i><!-- переход в JS сделан -->
+					<i><li class="answer" id="Page32Answer1All1">Поехать центр города</li></i><!-- переход в JS сделан -->
 				</p>
 			</div>
 		</div>
@@ -1324,17 +1343,17 @@
 		<div class="game_page1" id="GamePage33"><!-- Page29Answer1All1 -->
 			<div class="game_text">
 				<i class="author">
-					Взломать дверь оказалось не трудно, даже энергии совсем чуть-чуть потратилось.
-					А спасенный робот согласился проводить по тихому обратно до развилки, от куда уже можно было поехать к туманному зданию.
-					Причем этот робот подтвердил, что тут и вправду недалеко есть база, но одному туда лучше не ходить, особенно с почти севшим аккумулятором...
-					"Спасибо, что проводил, скорее всего, даже если бы за нами следили, то потеряли на время точно."-подумал наш герой.
-					"Услуга, за услугу. А так, пожалуйста, рад помочь."-ответил BOT-42.
+					<div>Взломать дверь оказалось не трудно, даже энергии совсем чуть-чуть потратилось.</div>
+					<div>А спасенный робот согласился проводить по тихому обратно до развилки, от куда уже можно было поехать к туманному зданию.</div>
+					<div>Причем этот робот подтвердил, что тут и вправду недалеко есть база, но одному туда лучше не ходить, особенно с почти севшим аккумулятором...</div>
+					<div>"Спасибо, что проводил, скорее всего, даже если бы за нами следили, то потеряли на время точно."-подумал наш герой.</div>
+					<div>"Услуга, за услугу. А так, пожалуйста, рад помочь."-ответил BOT-42.</div>
 
 				</i>
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page33Answer1All2">Поехать к заводу в тумане</li></i><!-- переход в JS сделан -->
+					<i><li class="answer" id="Page33Answer1All1">Поехать к заводу в тумане</li></i><!-- переход в JS сделан -->
 				</p>
 			</div>
 		</div>
@@ -1342,12 +1361,14 @@
 		<div class="game_page1" id="GamePage34"><!-- Page24Answer2All2 -->
 			<div class="game_text">
 				<i class="author">
-					
+					"Зря я его бросил...Но мне, наверное, ничего не оставалось...Ну ладно. Я уверен, что еще остался тот, кому нужна моя помощь!"
+					Впереди виднелась страя, заброшенная станция, на которой, когда-то останавливались поезда и забирали людей.
+					"Возвращаться сейчас назад - будет очень глупо, за мной и так по пятам следуют, а еще я им на встречу пойду."
 				</i>
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page34Answer1All2"></li></i>
+					<i><li class="answer" id="Page34Answer1All1">Поехать к железнодорожной станции</li></i>не работает<!-                                   >
 				</p>
 			</div>
 		</div>
@@ -1355,17 +1376,19 @@
 		<div class="game_page1" id="GamePage35"><!-- Page25Answer2All2 -->
 			<div class="game_text">
 				<i class="author">
-					
+					"Зря я его бросил...Но мне, наверное, ничего не оставалось...Ну ладно. Я уверен, что еще остался тот, кому нужна моя помощь!"
+					Впереди виднелись огромные горы, верушки которых, даже не были видны из-за тумана, но подъезжать к ним не хотелось.
+					"Возвращаться сейчас назад - будет очень глупо, за мной и так по пятам следуют, а еще я им на встречу пойду."
 				</i>
 			</div>
 			<div class="game_answers">
 				<p>
-					<i><li class="answer" id="Page35Answer1All2"></li></i>
+					<i><li class="answer" id="Page35Answer1All1">Поехать к горам</li></i>не работает<!-                                   >
 				</p>
 			</div>
 		</div>
 		
-		<div class="game_page1" id="GamePage36"><!--  -->
+		<div class="game_page1" id="GamePage36"><!-- Page34Answer1All2 -->
 			<div class="game_text">
 				<i class="author">
 					
@@ -1378,7 +1401,7 @@
 			</div>
 		</div>
 		
-		<div class="game_page1" id="GamePage37"><!--  -->
+		<div class="game_page1" id="GamePage37"><!-- Page35Answer1All2 -->
 			<div class="game_text">
 				<i class="author">
 					
@@ -1613,7 +1636,7 @@
 	<!--КАРТА-->
 	<div class="all_page1Game_map" id="PageGame3">
 	<div class="map"></div>
-	<button class="clase_map"></button>
+	<button class="close_map" id="CloseMap"><i>Закрыть</i></button>
 	<!--КАРТА-->
 
 
@@ -1924,12 +1947,17 @@
 
 		MapOpen.addEventListener('click', function() {
 			PageGame3.style.visibility = 'visible';//Появится карта
-			PageGame1.style.marginLeft = '-200%';//игра скроется
+			PageGame1.style.marginLeft = '-300%';//Игра приостановися
 		});
 		
 		CloseAlert.addEventListener('click', function() {
 			Indi.style.visibility = 'visible';//появятся индикаторы
 			DopRule.style.visibility = 'hidden';//самодельный alert-подсказка
+		});
+
+		CloseMap.addEventListener('click', function() {
+			PageGame3.style.visibility = 'hidden';//Карта закроется
+			PageGame1.style.marginLeft = '0%';//Игра продолжится
 		});
 
 		LifeEvil.innerHTML = LifeEvilValue;
@@ -2126,17 +2154,31 @@
 		let Page27Answer1All2 = document.getElementById('Page27Answer1All2'); //1-й ответ на странице 27
 		let Page27Answer2All2 = document.getElementById('Page27Answer2All2'); //2-й ответ на странице 27
 
-		let Page28Answer1All2 = document.getElementById('Page28Answer1All2'); //1-й ответ на странице 28
-		let Page28Answer2All2 = document.getElementById('Page28Answer2All2'); //2-й ответ на странице 28
+		let Page28Answer1All1 = document.getElementById('Page28Answer1All2'); //1-й ответ на странице 28
 
-		let Page29Answer1All2 = document.getElementById('Page29Answer1All2'); //1-й ответ на странице 29
-		let Page29Answer2All2 = document.getElementById('Page29Answer2All2'); //2-й ответ на странице 29
+		let Page29Answer1All1 = document.getElementById('Page29Answer1All2'); //1-й ответ на странице 29
 
-		let Page30Answer1All2 = document.getElementById('Page30Answer1All2'); //1-й ответ на странице 30
-		let Page30Answer2All2 = document.getElementById('Page30Answer2All2'); //2-й ответ на странице 30
+		let Page30Answer1All1 = document.getElementById('Page30Answer1All2'); //1-й ответ на странице 30
+
+		let Page31Answer1All1 = document.getElementById('Page31Answer1All1'); //1-й ответ на странице 31
+
+		let Page32Answer1All1 = document.getElementById('Page32Answer1All1'); //1-й ответ на странице 32
+
+		let Page33Answer1All1 = document.getElementById('Page33Answer1All1'); //1-й ответ на странице 33
+
+		let Page34Answer1All1 = document.getElementById('Page34Answer1All1'); //1-й ответ на странице 34
+
+		let Page35Answer1All1 = document.getElementById('Page35Answer1All1'); //1-й ответ на странице 35
 
 		let SaveClass = HeroClass.value; //Умение робота
 
+		function UpdateFind () {
+			if (FoundValue < 5) {
+				FoundValue = FoundValue + 1;
+			} else {
+				//Стоп игра
+			};
+		};
 	//Система автоматического определения урона, наносимого врагом роботу
 		function BattleRules () {
 			if (DangerValue < 10) {
@@ -2655,6 +2697,7 @@
 			GamePage13.style.visibility = 'hidden';
 			//Переключение завершено
 
+			UpdateFind();//Нашелся робот
 			UpdateDanger();//Повышение опасности
 			UpdateIndi();//Обновление
 		});
@@ -2674,6 +2717,7 @@
 			GamePage14.style.visibility = 'hidden';
 			//Переключение завершено
 
+			UpdateFind();//Нашелся робот
 			UpdateDanger();//Повышение опасности
 			UpdateIndi();//Обновление
 		});
@@ -2825,9 +2869,27 @@
 			UpdateIndi();//Обновление
 		});
 
+		Page24Answer2All2.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage34.style.visibility = 'visible';
+			GamePage24.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
 		Page25Answer1All2.addEventListener('click', function() {
 			//Переключение страниц
 			GamePage31.style.visibility = 'visible';
+			GamePage25.style.visibility = 'hidden';
+			//Переключение завершено
+
+			UpdateIndi();//Обновление
+		});
+
+		Page25Answer2All2.addEventListener('click', function() {
+			//Переключение страниц
+			GamePage34.style.visibility = 'visible';
 			GamePage25.style.visibility = 'hidden';
 			//Переключение завершено
 
@@ -2914,7 +2976,7 @@
 			UpdateIndi();//Обновление
 		});
 
-		Page32Answer1All2.addEventListener('click', function() {
+		Page32Answer1All1.addEventListener('click', function() {
 			//Переключение страниц
 			GamePage24.style.visibility = 'visible';
 			GamePage32.style.visibility = 'hidden';
@@ -2923,7 +2985,7 @@
 			UpdateIndi();//Обновление
 		});
 
-		Page33Answer1All2.addEventListener('click', function() {
+		Page33Answer1All1.addEventListener('click', function() {
 			//Переключение страниц
 			GamePage25.style.visibility = 'visible';
 			GamePage33.style.visibility = 'hidden';
